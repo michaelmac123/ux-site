@@ -1,0 +1,32 @@
+
+= partial "layouts/navigation"
+/ Header
+- data.works.each_with_index do |wrk, i|
+  - if wrk['id'] == locals[:id]
+    .intro-header
+      .vignette
+        .container
+          .row
+            .col-lg-10.col-lg-offset-1
+              .intro-message
+                .intro-content
+                  .row
+                    .col-md-5.col-sm-3.col-xs-6
+                      = image_tag "work/hero-#{wrk['name'].parameterize}.png", class: "img-responsive"
+                    .col-md-7.col-xs-12.margin-topgap5.padding-gap0
+                      %h2.dress-class.margin-topgap5.text-left= wrk['title']
+                      %p.text-left= wrk['description']
+          .row.process-key-points
+            .col-lg-4.col-xs6
+              %h3.text-left Project Overview
+              %hr.section-heading-spacer
+              %p.clear-left= wrk['overview']
+            .col-lg-4.col-xs6
+              %h3.text-left Project Requirements
+              %hr.section-heading-spacer
+              %p.clear-left= wrk['requirements']
+            .col-lg-4.col-xs6
+              %h3.text-left Project Role
+              %hr.section-heading-spacer
+              %p.clear-left= wrk['role']
+    = partial "works/#{wrk['name'].parameterize}"

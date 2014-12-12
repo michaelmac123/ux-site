@@ -1,0 +1,159 @@
+---
+title: Michael McMillan | UX Designer
+body_class: index
+---
+= partial "layouts/navigation"
+/ = partial "layouts/header"
+.content-section-a
+  .container
+    .row
+      .col-lg-7.col-xs-12
+        %h2.section-heading.margin-bottomgap0.med-blue
+          Who Am I?
+        %hr.section-heading-spacer
+        %p.clear-left.section-body-text
+          Suspendisse vestibulum dignissim quam. Integer vel augue. Phasellus nulla purus, interdum ac, venenatis non, varius rutrum, leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis a eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Fusce magna mi, porttitor quis, convallis eget, sodales ac, urna. Phasellus luctus venenatis magna.
+        %p.clear-left.section-body-text
+          Duis eros mi, dictum vel, fringilla sit amet, fermentum id, sem. Phasellus nunc enim, faucibus ut, laoreet in, consequat id, metus. Vivamus dignissim. Cras lobortis tempor velit. Phasellus nec diam ac nisl lacinia tristique. Nullam nec metus id mi dictum dignissim. Nullam quis wisi non sem lobortis condimentum. Phasellus pulvinar, nulla non aliquam eleifend, tortor wisi scelerisque felis, in sollicitudin arcu ante.
+      .col-lg-5.col-xs-12.skill
+        %h2.section-heading.margin-bottomgap0.med-blue
+          Skills
+        %hr.section-heading-spacer
+          .col-lg-10.margin-topgap5.margin-bottomgap5{ style: "background-color:lightblue;"}
+            %p.margin-gap0.padding-gap10 User Experience
+
+          .col-lg-7.clear-both.margin-bottomgap5{ style: "background-color:plum;"}
+            %p.margin-gap0.padding-gap10 Research
+
+          .col-lg-8.margin-bottomgap5.clear-both{ style: "background-color:lightpink;"}
+            %p.margin-gap0.padding-gap10 Information Architecture
+
+          .col-lg-10.margin-bottomgap5{ style: "background-color:gainsboro;"}
+            %p.margin-gap0.padding-gap10 Visual Design
+
+          .col-lg-9.margin-bottomgap5{ style: "background-color:lightgreen;"}
+            %p.margin-gap0.padding-gap10 Wireframing
+
+          .col-lg-10.margin-bottomgap5{ style: "background-color:wheat;"}
+            %p.margin-gap0.padding-gap10 Rapid Prototyping (HTML/CSS/JS)
+
+          .col-lg-9.margin-bottomgap5{ style: "background-color:salmon;"}
+            %p.margin-gap0.padding-gap10 Photoshop/Illustrator
+
+.content-section-a
+  .container
+    .row
+      .col-md-12
+        %h2.section-heading.margin-bottomgap0.med-blue
+          Tying it all together
+          %small (select below to learn more)
+        %p.about-content Having such a diverse work background... blah blah blah
+        .about-list-circles
+          // connect each with thin line
+          %a.about-list-circles-links{href:"#panel_1"}
+            = inline_svg('ux-chef-svg', class: "about-svg")
+          %span.about-list-title Chef
+
+        .about-list-circles
+          %a.about-list-circles-links{href:"#panel_2"}
+            = inline_svg('ux-lightbulb-svg', class: "about-svg")
+          %span.about-list-title Marketing Specialist
+
+        .about-list-circles
+          %a.about-list-circles-links{href:"#panel_3"}
+            = inline_svg('ux-pencil-svg', class: "about-svg")
+          %span.about-list-title Graphic Designer
+
+        .about-list-circles
+          %a.about-list-circles-links{href:"#panel_4"}
+            = inline_svg('ux-code-svg', class: "about-svg")
+          %span.about-list-title Web Developer
+
+        .about-list-circles
+          %a.about-list-circles-links{href:"#panel_5"}
+            // svg
+            = inline_svg('ux-clipboard-svg', class: "about-svg")
+          %span.about-list-title UX Designer
+
+.content-section-a
+  .container
+    .row.about-box-panel#panel_1
+      .col-md-12
+        %h2.section-sub-heading Chef
+        %hr.clear-both.margin-gap10
+        %p.about-content Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+        %ul.list-inline.about-list-tubes
+          %li Sauces
+          %li Stews
+          %li Knife Skills
+          %li Grilling
+          %li Ceviche
+          %li Saute
+          %li Pastry
+          %li Creative
+
+    .row.about-box-panel#panel_2
+      .col-md-12
+        %h2.section-sub-heading Marketing Specialist
+        %hr.clear-both.margin-gap10
+        %p.about-content Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+        %ul.list-inline.about-list-tubes
+          %li Market Research
+          %li Strategic Directions
+          %li Public Relations
+          %li Content Development
+          %li Email Marketing
+
+    .row.about-box-panel#panel_3
+      .col-md-12
+        %h2.section-sub-heading Graphic Designer
+        %hr.clear-both.margin-gap10
+        %p.about-content Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+        %ul.list-inline.about-list-tubes
+          %li Branding
+          %li Illustrator
+          %li Photoshop
+          %li Photography
+          %li Logo Design
+
+    .row.about-box-panel#panel_4
+      .col-md-12
+        %h2.section-sub-heading Web Developer
+        %hr.clear-both.margin-gap10
+        %p.about-content Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+        %ul.list-inline.about-list-tubes
+          %li WebDesign
+          %li CSS/SASS
+          %li HTML/HAML
+          %li Javascript/Coffeescript
+          %li Ruby on Rails
+          %li Responsive
+          %li WordPress
+    .row.about-box-panel#panel_5
+      .col-md-12
+        %h2.section-sub-heading UX Designer
+        %hr.clear-both.margin-gap10
+        %p.about-content Cras sed ante. Phasellus in massa. Curabitur dolor eros, gravida et, hendrerit ac, cursus non, massa. Aliquam lorem. In hac habitasse platea dictumst. Cras eu mauris. Quisque lacus. Donec ipsum. Nullam vitae sem at nunc pharetra ultricies. Vivamus elit eros, ullamcorper a, adipiscing sit amet, porttitor ut, nibh. Maecenas adipiscing mollis massa. Nunc ut dui eget nulla venenatis aliquet. Sed luctus posuere justo. Cras vehicula varius turpis. Vivamus eros metus, tristique sit amet, molestie dignissim, malesuada et, urna.
+        %ul.list-inline.about-list-tubes
+          %li Rapid Prototyping
+          %li UX Research
+          %li Azure
+          %li Balsamiq
+          %li User Scenarios
+          %li Proto Personas
+
+= partial "layouts/bottom_banner"
+
+:javascript
+  $(document).ready(function(){
+    $('.about-box-panel').hide();
+
+    $('.about-list-circles a').bind('click', function(e){
+      $('.about-list-circles a.current').removeClass('current');
+      $('.about-box-panel:visible').hide();
+      $(this.hash).fadeIn('2000');
+      $(this).addClass('current');
+      e.preventDefault();
+    }).filter(':first').click();
+
+  });

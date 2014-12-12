@@ -1,0 +1,18 @@
+/ Page Content
+.content-section-a
+  .container
+    .row.work
+      -data.works.each do |work|
+        %div{ class: "col-md-4 col-xs-12 work-container #{work['hide']}" }
+          .work-box
+            .work-text
+              .work-inner
+                %i{ class: "fa fa-#{work['icon']} fa-4x" }
+                %h6.work-title= work['title']
+                %p.work-subtitle= work['project']
+                %ul.work-list.list-unstyled
+                  - unless work['details'].blank?
+                    - work['details'].each do |details|
+                      %li.work-content= details
+                %a.work-button.btn.btn-red-orange{ href: "work/#{work['title'].parameterize}"} Explore
+          %hr.section-body-spacer.visible-xs-block.margin-gap0

@@ -1,0 +1,27 @@
+$black:     #000000;
+$charcoal:  #2f3336;
+$dark-blue: #313641;
+$navy:      #4D5C70;
+$med-blue:  #666B73;
+$light-blue:#F0F4F7;
+$light-gray:#C6C8CB;
+$white:     #FFFFFF;
+$bone:      #FCFBFA;
+
+$khaki:     #D9D1C7;
+$tan:       #8C8780;
+$orange:    #fc5d32;
+$red-orange:#A82124;
+
+//Fonts
+$sansFontFamily:    "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serifFontFamily:   "Josefin Slab", "Times New Roman", Times, serif;
+$roboto:            "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$upper-class:   $serifFontFamily;
+$dress-class:   $sansFontFamily;
+$work-class:    $roboto;
+
+.upper-class {  font-family:  $upper-class; line-height:110%; } // weird line-height
+.dress-class {  font-family:  $dress-class; }
+.work-class  {  font-family:  $work-class;  }

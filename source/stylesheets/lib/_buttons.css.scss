@@ -1,0 +1,54 @@
+// Color pairs for standard colors.
+$colors: "charcoal" $charcoal, "white" $white, "light-blue" $light-blue, "med-blue" $med-blue, "dark-blue" $dark-blue, "bone" $bone, "khaki" $khaki, "tan" $tan;
+@each $color in $colors {
+  $key:   nth(unquote($color), 1);
+  $value: nth($color, 2);
+  .#{$key} {
+    color:  $value;
+    fill:   $value;
+    &-bg {
+      background-color: $value; } } }
+
+@mixin btn-mixin($primary: $light-gray, $text: $white, $secondary: $charcoal ) {
+  @include prefix( box-shadow, 0 0 5px rgba(darken($primary, 10), .5) inset , moz webkit ms o );
+  @include prefix( border-radius, 3px, moz webkit ms o);
+  @include prefix( transition, all 350ms, moz webkit ms o);
+  background:   $primary;
+  border:{
+    top:        none;
+    right:      none;
+    bottom:     4px solid darken($primary, 10);
+    left:       none; }
+  color:        $text;
+  display:      inline-block;
+  padding:      .25em 1em;
+  &:hover {
+    @include prefix( transition, all 350ms, moz webkit ms o);
+    @include prefix(box-shadow, 0 0 5px rgba(darken($secondary, 10), .5) inset, moz webkit ms o);
+    background: $secondary;
+    border-bottom:     4px solid darken($secondary, 10);
+    color:      $text; } }
+
+.btn {
+  &.btn-charcoal {
+    $primary:     $charcoal;
+    @include btn-mixin($primary); }
+  &.btn-theme-red {
+    $primary:     $theme-red;
+    @include btn-mixin($primary);}
+
+  &.btn-med-blue {
+    $primary:     $med-blue;
+    @include btn-mixin($primary); }
+
+  &.btn-dark-blue {
+    $primary:     $dark-blue;
+    @include btn-mixin($primary); }
+
+  &.btn-lt-blue {
+    $primary:     lighten($med-blue, 10);
+    @include btn-mixin($primary); }
+  &.btn-lg {
+    padding:  .75em 2em;
+  }
+}

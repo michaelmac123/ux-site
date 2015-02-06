@@ -1,0 +1,303 @@
+@import "common";
+
+// content sections
+.content-section {
+  &-a {
+    $section-color:   $bone;
+    background-color: $section-color;
+    background-image: url('/images/bg-img.png');
+    border:{
+      top:        1px solid lighten($section-color, 15);
+      bottom:     1px solid darken($section-color, 15);  }
+    padding:      5px 0;
+    &:first-of-type {
+      border:{
+        top:        none; } } }
+  &-b {
+    $section-color:   darken($bone, 1);
+    background-color: $section-color;
+    background-image: url('/images/bg-img.png');
+    border:{
+      bottom:     1px solid darken($section-color, 15); }
+    padding:      10px 0; }
+  &-link {
+    display:      block;
+    height:       100%;
+    position:     absolute;
+    text-align:   center;
+    top:          0;
+    width:        100%;
+    i {
+      @include prefix(transition,all 500ms, moz webkit o ms);
+      bottom:     0;
+      color:      $white;
+      margin-left:-5%;
+      opacity:    0;
+      position:   absolute;
+      z-index:    2; }
+    &:hover > i {
+      bottom:     48%;
+      opacity:1; }
+    &:after {
+      @include prefix(transition,all 500ms, moz webkit o ms);
+      @include prefix(border-radius, 1px, moz wekit o ms);
+      background: rgba($charcoal, 0.75);
+      border:{
+        top:     1px solid rgba($charcoal, .5);
+        right:   1px solid rgba($charcoal, .5);
+        bottom:  3px solid rgba($charcoal, .5);
+        left:    1px solid rgba($charcoal, .5); }
+      bottom:     0;
+      content:    '\A';
+      height:     0;
+      left:       0;
+      position:   absolute;
+      opacity:    0;
+      text-align: center;
+      width:      95%; }
+    &:hover:after {
+      height:     100%;
+      opacity:    1; } }
+  &-image {
+    border:       7px solid lighten($med-blue, 35); }
+  &-img-responsive {
+    margin:       0 auto; } // <- To center img inside the box
+  &-base-heading {
+    font:{
+      family:    $work-class;
+      size:      2em;
+      style:     italic; }
+    margin:      15px 0 0 0; } }
+
+.section {
+  &-heading {
+    margin-bottom: 30px;
+    &-spacer {
+    @include float;
+    border-top:    3px solid lighten($med-blue, 35);
+    margin:        0px 0 10px 0;
+    width:         200px; } }
+
+  &-sub-heading {
+    @extend .section-heading;
+    color:        $med-blue;
+    font:{
+      family:      $work-class;
+      weight:      300; }
+    margin-bottom: 0; }
+
+  &-body {
+    &-spacer {
+      border-top:   1px solid lighten($med-blue, 15);
+      margin:       10px 0 5px 0; }
+      &-text {
+      color:        rgba($med-blue, .75);
+      font:{
+        size:       1em; } } } }
+
+.work {
+  min-height:             500px;
+  &-container {
+    margin:             0;
+    padding:            5px;
+  } }
+
+.process {
+  &-key-points {
+    text-align:         left;
+    margin:             1% 0 10% 0; } }
+
+.about {
+  &-content {
+    color:              $med-blue;
+    padding:            0 0 0 .75em; }
+  &-list-circles {
+    @include float;
+    margin-top:         2em;
+    padding:            0;
+    text-align:         center;
+    width:              19.5%;
+    &:after {
+      border-top:       1px solid $navy;
+      content:          '';
+      display:          block;
+      position:         relative;
+      right:            -182px;
+      bottom:           114px;
+      width:            36%; }
+    &:last-of-type:after {
+      border:none; } }
+
+  &-list-circles-links {
+    @include prefix(border-radius, 50%, moz wekit o);
+    @include prefix(transition,all 500ms ease, moz webkit o ms);
+    background-color:   $navy;
+    border:             0px solid $navy;
+    display:            inline-block;
+    padding:            25px;
+    width:              65%;
+    &:hover {
+      @include prefix(border-radius, 50%, moz wekit o);
+      @include prefix(transition,all 500ms ease, moz webkit o ms);
+      @include prefix(box-shadow,0 0 15 rgba($navy, .5), moz webkit o ms);
+      background-color: $theme-red;
+      border:           10px solid $navy; }
+    &.current {
+      background-color: rgba($navy, .10);
+      border:           10px solid rgba($navy, .95);
+      svg {
+        fill:$navy; }
+      &:hover {
+        @extend .current;
+        @include prefix(box-shadow,0 0 0 transparent, moz webkit o ms);
+        cursor:           default; } } }
+  &-svg {
+    fill:               $bone; }
+  &-list-title {
+    color:              $med-blue;
+    display:            block;
+    font:{
+      family:           $roboto;
+      size:             1.25em;
+      weight:           300; }
+    margin-top:         1em; }
+  &-list-tubes {
+    padding-left:       1em;
+    text-align:         center;
+    width: 100%;
+    li {
+      @include prefix(border-radius, 25px, moz wekit o ms);
+      @include font-smoothing;
+      @extend .work-class;
+      background-color: rgba($theme-red, .85);
+      color:            $white;
+      margin:           .25em 0;
+      padding:          5px 15px; } }
+  &-box-panel {
+    min-height:         250px; } }
+
+.job {
+  &-title {
+    color:              $navy;
+    font:{
+      weight:           500; }
+    margin:{
+      top:              10px;
+      bottom:           0; } }
+  &-subtitle {
+    color:              $navy;
+    font:{
+      size:             1.2em;
+      weight:           500; }
+    margin:             0px; }
+  &-description {
+    color:              $med-blue;
+    font-weight:        300;
+    margin:{
+      top:              10px; }
+    a {
+      cursor:           pointer; } }
+  &-button {
+    @extend .work-button;
+    opacity:            1;}
+}
+
+.banner {
+  color:            $bone;
+  background-size:  cover;
+  background-color: darken($navy, 20);
+  padding:          30px 0;
+  h2 {
+    @include font-smoothing();
+    color:          $white;
+    font-size:      3em;
+    margin:         5px 0 0 0;
+    text:{
+      align:        center;
+      shadow:       1px 2px 0px rgba($charcoal,0.5); } }
+  &-bar {
+    @include prefix(box-shadow,0 0 0 3px $dark-blue, moz webkit o ms);
+    background-color: rgba($bright-red, .6);
+    padding:{
+      bottom:       .75%;
+      top:          .75%; } }
+
+  &-social-buttons {
+    @include float;
+    margin:         0;
+    text-align:     center;
+    width:          100%; }
+
+  &-social-name {
+    font:{
+      size:         14px;
+      weight:       400; }
+    letter-spacing: 2px;
+    text-transform: uppercase; } }
+
+.footer {
+  &-links ul {
+    margin:           0;
+    padding-top:      10px;
+    width: 100%;
+    li > a {
+      @include font-smoothing();
+      color:          rgba($white, .75);
+      font:{
+        size: 0.8em;
+        weight: bold; }
+      padding:{
+        left:         1em; } }
+
+    li:after {
+      border-right: 1px solid rgba(255, 255, 255, 0.75);
+      content: "";
+      padding-left: 1em;
+      position: relative;
+      top: 0.05em; }
+
+    li:last-of-type:after {
+      border:none;
+      content:        ""; } }
+  &-copyright {
+    @include font-smoothing;
+    font-size:        0.9em;
+    color:            rgba($white, .5);
+    text-align:       center; } }
+
+#top-link-block {
+  a {
+    @include prefix(border-radius, 3px, moz wekit o ms);
+    @include prefix(box-shadow,0 0 3px 1px rgba($white ,.25), moz webkit o ms);
+    background: rgba(0,0,0, .5);
+    color: rgba($white, .95);
+    display:inline-block;
+    padding: 10% 25%;
+    text-shadow: 1px 1px 1px rgba(0,0,0, .75);
+    &:hover {
+      background: rgba(0,0,0, .75); } }
+  &.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -10%;
+    opacity:  .01;
+    right: 5%; }
+  &.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 10%;
+    @include prefix(transition,opacity 1s ease-in-out, moz webkit ms o);
+    right: 5%;
+    z-index: 1000; } }
+
+@media(max-width:1199px) {
+  .about-list-circles:after {
+    border:none; }
+  .about-list-circles-links {
+    width:      95%; }
+}
+
+@media(max-width:767px) {
+  .about-list-circles {
+    width:100%;
+  .about-list-circles-links {
+    width:      40%; }  }
+}

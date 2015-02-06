@@ -11,7 +11,42 @@ $bone:      #FCFBFA;
 $khaki:     #D9D1C7;
 $tan:       #8C8780;
 $orange:    #fc5d32;
-$red-orange:#A82124;
+
+$theme-red: #8E323B;
+$bright-red:#A82124;
+
+// Grid Columns
+$master-columns: 12;
+$gutter-width: 1/32;
+
+//Susy settings
+$susy: (
+  gutters: $gutter-width,
+  gutter-position: outside, //use margins. inside uses padding
+  // uncomment to toggle grid overlay
+  // debug: (
+  //   image: show,
+  //   color: blue,
+  //   output: overlay,
+  //   toggle: top right,
+  // ),
+);
+
+/// Map of breakpoints for responsive design.
+/// @access private
+/// @see {mixin} respond-to
+/// @type Map
+$breakpoints: (
+
+  'x-small':( max-width:  767px ),
+  'small':  ( min-width:  768px ),
+  'medium': ( min-width:  992px ),
+  'large':  ( min-width: 1200px ),
+
+) !global;
+
+//Fonts
+$font-size: 1.6;
 
 //Fonts
 $sansFontFamily:    "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;

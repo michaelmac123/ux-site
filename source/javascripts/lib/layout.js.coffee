@@ -5,11 +5,11 @@ $(document).ready () ->
   $("#year").text currentYear
 
   # Add headroom to Nav
-  nav = document.querySelector("nothing")
-  nav.classList.add "slide--up"  if window.location.hash
-  new Headroom(nav,
-    tolerance: 10
-    offset: 350
+  # nav = document.querySelector("nothing")
+  # nav.classList.add "slide--up"  if window.location.hash
+  # new Headroom(nav,
+  #   tolerance: 10
+  #   offset: 350
 
-  ).init()
-  return
+  # ).init()
+  # return

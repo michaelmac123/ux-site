@@ -1,0 +1,106 @@
+// Create columns: 1 - max col number (eg. 1-12)
+@mixin col-maker($max-cols:12) {
+  @for $i from 1 through $max-cols {
+    .col-#{$i} {
+      @include span($i of $max-cols);
+      @include gutters($max-cols $gutter-width after); } }
+}
+
+// For break points
+// Create columns: max-col - master-columns number (eg. 1-12)
+// And set to 100%
+@mixin col-maker-overage($grid-cols, $master-columns) {
+ @for $i from $grid-cols through $master-columns {
+    .col-#{$i} {
+      @include float();
+      width: 100%; } }
+}
+
+// X-Small
+@include respond-to('x-small') {
+  $grid-cols: 8;
+  @include with-layout($grid-cols) {
+    // @include col-maker($grid-cols);
+    .row {
+      @include clearfix;
+      width: 100%;
+      // Remove last cols right margin
+      // so the div won't get shifted to
+      // next line
+      *[class*="col-"]{
+        @include float;
+        width:100%;
+        &:last-of-type {
+              margin:{
+                right: 0; }
+        }
+      }
+    }
+  }
+}
+
+// Small
+@include respond-to('small') {
+  $grid-cols: 8;
+  @include with-layout($grid-cols) {
+    @include col-maker($grid-cols);
+    @include col-maker-overage($grid-cols, $master-columns);
+    .row {
+      @include clearfix;
+      width: 100%;
+      // Remove last cols right margin
+      // so the div won't get shifted to
+      // next line
+      *[class*="col-"]:last-of-type {
+        margin:{
+          right: 0; }
+      }
+    }
+  }
+}
+
+// Medium
+@include respond-to('medium') {
+  .container {
+    @include container(75em);
+  }
+
+  $grid-cols: $master-columns;
+  @include with-layout($grid-cols) {
+    @include col-maker($grid-cols);
+    .row {
+      @include clearfix;
+      width: 100%;
+      // Remove last cols right margin
+      // so the div won't get shifted to
+      // next line
+      *[class*="col-"]:last-of-type {
+        margin:{
+          right: 0; }
+      }
+    }
+  }
+}
+
+// Large
+@include respond-to('large') {
+  .container {
+    @include container(75em);
+  }
+
+  $grid-cols: $master-columns;
+  @include with-layout($grid-cols) {
+    @include col-maker($grid-cols);
+    .row {
+      @include clearfix;
+      width: 100%;
+      // Remove last cols right margin
+      // so the div won't get shifted to
+      // next line
+      *[class*="col-"]:last-of-type {
+        margin:{
+          right: 0; }
+      }
+    }
+  }
+}

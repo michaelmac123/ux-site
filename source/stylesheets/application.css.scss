@@ -1,4 +1,16 @@
+@import "susy";
 @import "vendor/normalize";
-@import "font-awesome";
-@import "bootstrap";
-@import "lib/theme";
+@import "lib/common";
+
+//default theme colors
+// $color-primary: $gray-light !default;
+// $color-secondary: $blue !default;
+// $color-body: $white !default;
+// $color-accent:    $red-orange !default;
+// $color-vignette: $color-secondary !default;
+// $color-cta: $white !default;
+
+@import "lib/grid";
+@import "lib/buttons";
+@import "lib/navigation";
+@import "lib/base_theme";

@@ -1,18 +1,24 @@
 / Page Content
 .content-section-a
   .container
+    .row
+      .col-7
+        %h2.section-heading.margin-bottomgap0.med-blue
+          Feature Works
+
+.content-section-a
+  .container
     .row.work
       -data.works.each do |work|
-        %div{ class: "col-md-4 col-xs-12 work-container #{work['hide']}" }
+        %div{ class: "col-3 work-container" }
           .work-box
             .work-text
               .work-inner
-                %i{ class: "fa fa-#{work['icon']} fa-4x" }
+                = inline_svg("#{work['icon']}", class: "work-svg")
                 %h6.work-title= work['title']
                 %p.work-subtitle= work['project']
                 %ul.work-list.list-unstyled
                   - unless work['details'].blank?
                     - work['details'].each do |details|
                       %li.work-content= details
-                %a.work-button.btn.btn-red-orange{ href: "work/#{work['title'].parameterize}"} Explore
-          %hr.section-body-spacer.visible-xs-block.margin-gap0
+                %a.work-button.btn.btn-theme-red{ href: "work/#{work['title'].parameterize}"} Explore

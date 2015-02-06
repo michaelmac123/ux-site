@@ -1,13 +1,33 @@
-@import "variables", "mixins", "fonts";
+@import "variables";
+@import "mixins";
+@import "fonts";
 
 // Resets
-body,
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  background-color: darken($navy, 20);
+  color:            $med-blue;
   font:{
-    family: $work-class;
-    weight: normal; }
-  height: 100%;
-  width:  100%; }
+    family:         $work-class;
+    weight:         normal; }
+  @include font-size($font-size);
+  height:           100%;
+  line-height:      1.42857;
+  width:            100%; }
 
 h1,
 h2,
@@ -28,13 +48,28 @@ ul li,
 p {
   font:{
     family: $work-class;
-    weight: normal; } }
+    weight: normal; }
+  text-decoration:none; }
+
+hr {
+  border:{
+    top: .1em solid $white;
+    right: none;
+    bottom: none;
+    left: none;}
+  height: 0;
+  width: 100%;
+  &:before {
+    border:{
+    bottom: .1em solid $white; }
+  }
+}
 
 .bold {
   font-weight:  bold; }
 
 .btn {
-  @include border-radius(2px); }
+  @include prefix(border-radius, 2px, moz webkit); }
 
 .border-left  { border-left:  1px solid darken($bone, 10); }
 .clear-both   { clear: both;    }
@@ -43,23 +78,39 @@ p {
 .margin-auto  { margin: 0 auto; }
 .block        { display:block;  }
 
+.text-center  { text-align:center; }
+.text-left    { text-align:left; }
+.text-right   { text-align:right; }
+
+// create clearfix class
+.clearfix {
+  @include clearfix; }
+
+// Float Classes
+.pull-right   { @include float; }
+.pull-right   { @include float(right); }
+
+// List Styles
+.list-unstyled {
+  li {
+    list-style-type: none; } }
+
+.list-inline {
+  display:inline-block;
+ li {
+    display: inline-block;
+    list-style-type: none; } }
+
+.small {
+  font:{
+    size: 55%;} }
+
 // Overrides
 .headroom {
-    -webkit-transition: transform 200ms linear;
-    -o-transition: transform 200ms linear;
-    transition: transform 200ms linear }
+  @include prefix(transition, transform 200ms linear, moz webkit o ); }
 
 .headroom--pinned {
-    -webkit-transform: translateY(0%);
-    -moz-transform: translateY(0%);
-    -ms-transform: translateY(0%);
-    -o-transform: translateY(0%);
-    transform: translateY(0%) }
+  @include prefix(transition, translateY(0%), moz webkit o ms ); }
 
 .headroom--unpinned {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%) }
-
+  @include prefix(transition, translateY(-100%), moz webkit o ms ); }

@@ -32,7 +32,6 @@
     %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png")
     %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png")
 
-    -# Javascript
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
 
@@ -40,10 +39,11 @@
     = stylesheet_link_tag 'application'
 
   %body{class: current_page.data.body_class || 'page'}
-    %span#top-link-block.hidden
-      %a{ href: "#top", onclick: "$('html,body').animate({scrollTop:0},'slow');return false;" }
-        %i.fa.fa-angle-up.fa-2x
+    / %span#top-link-block.hidden
+    /   %a{ href: "#top", onclick: "$('html,body').animate({scrollTop:0},'slow');return false;" }
+    /     %i.fa.fa-angle-up.fa-2x
     = yield
+
     = partial "layouts/footer"
 
     -# Javascripts

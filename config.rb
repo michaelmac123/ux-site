@@ -1,23 +1,13 @@
-activate :directory_indexes
-
 set :relative_links, true
 
-###
-# Page options, layouts, aliases and proxies
-###
+#stop annoying message
+I18n.enforce_available_locales = true
 
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# Susy grids
+require 'susy'
+
+# You need this for pretty URLS
+activate :directory_indexes
 
 # Standard Page route
 data.pages.each do |page|
@@ -48,7 +38,9 @@ helpers do
       partial "index", :locals => {:id => s }
     when '2'
       partial "pages/work", :locals => {:id => s }
-    when '5'
+    when '3'
+      partial "pages/cv", :locals => {:id => s }
+    when '4'
       partial "pages/find-me", :locals => {:id => s }
     else
       partial "pages/work", :locals => {:id => s }
@@ -75,11 +67,6 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-set :fonts_dir, 'fonts'
-
-set :haml, { :ugly => true, :format => :html5 }
-
-
 # Build-specific configuration
 configure :build do
   ignore 'images/*.psd'
@@ -98,12 +85,12 @@ configure :build do
   activate :cache_buster
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
-  # require "middleman-smusher"
-  # activate :smusher
+  require "middleman-smusher"
+  activate :smusher
 
   # Or use a different image path
   # set :http_path, "/Content/images/"

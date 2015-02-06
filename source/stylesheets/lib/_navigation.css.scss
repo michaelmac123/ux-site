@@ -1,0 +1,111 @@
+//Navbar
+.navbar-container {
+  $primary-nav:     $bone;
+  $primary-text:    $charcoal;
+  @include prefix(border-radius, 0, moz webkit);
+  background-color: $bone;
+  background-image: url('/images/bg-img.png');
+  border:{
+    top:            25px solid $theme-red;
+    right:          0;
+    bottom:         0;
+    left:           0; }
+  margin-bottom:    0;
+  min-height:       60px;
+  padding:          10px 0 0 0;
+  z-index:          10;
+  .navbar-nav > li {
+    display:inline-block;
+    list-style-type:none;
+    border:         none;
+    margin:         0 10px;
+    & > a {
+      @include prefix(transition,all 500ms, moz webkit ms o);
+      @include font-smoothing();
+      border-bottom:  5px solid transparent;
+      color:          $primary-text;
+      font:{
+        size:         1.1em;
+        weight:       normal; }
+      padding:        25px 10px 15px 10px;
+      &:hover {
+        @include prefix(transition,all 1000ms, moz webkit ms o);
+        border-bottom:    5px solid rgba($charcoal, .85);
+        color:            rgba($charcoal, .85); } } }
+
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:hover,
+  .navbar-nav > .active > a:focus {
+    background-color: transparent;
+    border-bottom:    5px solid $theme-red;
+    color:            $theme-red;
+    cursor:           default;  }
+  .navbar-brand {
+    color:          $charcoal;
+    font:{
+      size:         1.9em;
+      weight:       lighter; }
+    height:         auto;
+    padding:        5px 15px;
+    &-img {
+      height:       75px; }
+    &-svg {
+      @include prefix(transition,all 250ms, moz webkit ms o);
+      width:        60px;
+      fill:         $charcoal; }
+    &-small {
+      font:{
+        family:     $upper-class;
+        size:       .7em;
+        style:      italic; }
+      position:     relative;
+      top:          .16em; }
+    &:hover {
+      @include prefix(transition,all 250ms, moz webkit ms o);
+      color:        $theme-red;
+      .navbar-brand-svg {
+        @include prefix(transition,all 250ms, moz webkit ms o);
+        fill:       $theme-red;
+      } }
+    span {
+      display:      inline-block;
+      vertical-align:middle; } }
+  .navbar-toggle {
+    background-color: rgba($primary-text, .5);
+    margin-top:     7.5%;
+    padding:        10px; } }
+
+.vignette {
+  background: radial-gradient(ellipse at center,  rgba($white,.25) 0%,rgba($white,0) 100%); }
+
+// Header section
+.intro {
+  &-header {
+    background-color: $bone;
+    background-image: url('/images/bg-img.png');
+    border:{
+      bottom:     1px solid lighten($med-blue, 35);  }
+    text-align: center;
+    p {
+      color:    $med-blue; } }
+
+  &-message {
+    margin:{
+      bottom:   5%;
+      top:      5%; } }
+
+  &-content {
+    top:            10px;
+    position:       relative;
+    h1 {
+      font:{
+        family:     $work-class;
+        size:       5em; }
+      margin:       0;
+      padding:      0; }
+    h2 {
+      border-bottom:    3px solid lighten($med-blue, 35);
+      font:{
+        family:     $work-class; }
+      color:       $med-blue; } }
+}

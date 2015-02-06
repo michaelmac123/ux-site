@@ -1,13 +1,28 @@
 / Footer
-%footer
-  .container
-    .row
-      .col-lg-12.footer-links
-        %ul.list-inline.text-center.text-muted
-          = partial "layouts/navlinks"
-      .col-lg-12
-        %p.text-muted.small.text-center
-          Copyright
-          &copy;
-          %span#year
-          Michael McMillan. &nbsp;All Rights Reserved
+%footer.banner
+  .black-vignette
+    .banner-bar
+      .container
+        .row
+          .col-md-12
+            %ul.list-inline.banner-social-buttons
+              %li
+                %a.btn.btn-lt-blue.btn-lg{ href: "https://twitter.com/michaelmac"}
+                  %i.fa.fa-twitter.fa-fw
+                  %span.banner-social-name Twitter
+              %li
+                %a.btn.btn-lt-blue.btn-lg{ href: "https://www.linkedin.com/pub/michael-mcmillan/16/39b/a18"}
+                  %i.fa.fa-linkedin.fa-fw
+                  %span.banner-social-name Linkedin
+
+    .container
+      .row
+        .col-md-12.footer-links
+          %ul.list-inline.text-center.text-muted
+            = partial "layouts/navlinks"
+        .col-md-12
+          %p.footer-copyright
+            Copyright
+            &copy;
+            %span#year
+            Michael McMillan. &nbsp;All Rights Reserved

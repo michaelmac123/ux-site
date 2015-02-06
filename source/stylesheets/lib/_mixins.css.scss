@@ -1,90 +1,56 @@
-@mixin float($float:left, $pos:relative) {
-  float:    $float;
-  position: $pos;}
+/// Mixin helper to output vendor prefixes
+/// @access public
+/// @author HugoGiraudel
+/// @param {String} $property - Unprefixed CSS property
+/// @param {*} $value - Raw CSS value
+/// @param {List} $prefixes - List of prefixes to output
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value; }
+  #{$property}: $value;
+}
 
 @mixin font-smoothing( $webkit: antialiased, $moz: grayscale) {
   -webkit-font-smoothing:   $webkit;
   -moz-osx-font-smoothing:  $moz; }
 
-@mixin transform($properties) {
-  -webkit-transform:  $properties; /* Safari and Chrome */
-  -moz-transform:     $properties; /* Firefox */
-  -ms-transform:      $properties; /* IE 9 */
-  -o-transform:       $properties;
-  transform:          $properties; }
-
-@mixin transitions($properties){
-  -webkit-transition: $properties;  /* Saf3.2+, Chrome */
-  -moz-transition:    $properties;  /* FF4+ */
-  -ms-transition:     $properties;  /* IE10 */
-  -o-transition:      $properties;  /* Opera 10.5+ */
-  transition:         $properties; }
-
-// Mixin for rounded
-@mixin rounded($radius: 10px, $moz:true, $webkit: true, $ms:true, $sledge-hammer:false){
-  @if $sledge-hammer {
-    @if $moz      {-moz-border-radius:    #{$radius} !important;}
-    @if $webkit   {-webkit-border-radius: #{$radius} !important;}
-    @if $ms       {-ms-border-radius:     #{$radius} !important;}
-    border-radius: #{$radius} !important; }
-  @else {
-    @if $moz      {-moz-border-radius:    $radius;}
-    @if $webkit   {-webkit-border-radius: $radius;}
-    @if $ms       {-ms-border-radius:     $radius;}
-    border-radius: $radius; } }
-
-// Color pairs for standard colors.
-$colors: "charcoal" $charcoal, "white" $white, "light-blue" $light-blue, "med-blue" $med-blue, "dark-blue" $dark-blue, "bone" $bone, "khaki" $khaki, "tan" $tan;
-@each $color in $colors {
-  $key:   nth(unquote($color), 1);
-  $value: nth($color, 2);
-  .#{$key} {
-    color:  $value;
-    fill:   $value;
-    &-bg {
-      background-color: $value; } } }
-
-// Button overrides
-@mixin btn-mixin($primary: $light-gray, $text: $white, $secondary: $charcoal ) {
-  @include box-shadow(0 0 5px rgba(darken($primary, 10), .5) inset);
-  @include rounded(4px);
-  @include transition(all 350ms);
-  background:   $primary;
-  border:{
-    top:        none;
-    right:      none;
-    bottom:     4px solid darken($primary, 10);
-    left:       none; }
-  color:        $text;
-  &:hover {
-    @include transition(all 350ms);
-    @include box-shadow(0 0 5px rgba(darken($secondary, 10), .5) inset);
-    background: $secondary;
-    border-bottom:     4px solid darken($secondary, 10);
-    color:      $text; } }
-
-.btn {
-  &.btn-charcoal {
-    $primary:     $charcoal;
-    @include btn-mixin($primary); }
-  &.btn-red-orange {
-    $primary:     $red-orange;
-    @include btn-mixin($primary);}
-
-  &.btn-med-blue {
-    $primary:     $med-blue;
-    @include btn-mixin($primary); }
-
-  &.btn-dark-blue {
-    $primary:     $dark-blue;
-    @include btn-mixin($primary); }
-
-  &.btn-lt-blue {
-    $primary:     lighten($med-blue, 10);
-    @include btn-mixin($primary); }
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
 }
 
+// Easy float class
+@mixin float($float:left, $pos:relative) {
+  float:    $float;
+  position: $pos; }
 
+  // For clearing floats properly
+@mixin clearfix{
+  *zoom: 1;
+  &:before, &:after{
+    content: "";
+    display: table; }
+  &:after{
+    clear:both; } }
+
+// create clearfix class
+.clearfix {
+  @include clearfix; }
+
+/// Responsive manager.
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}
 @mixin radial-gradient($from, $to) {
     background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
@@ -93,8 +59,7 @@ $colors: "charcoal" $charcoal, "white" $white, "light-blue" $light-blue, "med-bl
     background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
     background: radial-gradient(center, circle cover, $from 0%, $to 100%);
     background-color: $from;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#{$from}", endColorstr="$to",GradientType=1 );
-}
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#{$from}", endColorstr="$to",GradientType=1 ); }
 
 @mixin gapmaker($sizes: (5 10 15 25), $sides: (top bottom), $type: "margin", $class: "" ) {
   @if $type == nil {
@@ -108,12 +73,6 @@ $colors: "charcoal" $charcoal, "white" $white, "light-blue" $light-blue, "med-bl
       &.#{$type}-#{$class}gap#{$sz} {
         #{$type}:{
           #{$sd}: #{$sz}px; } } } } } }
-
-@mixin border-radius($radius: 10px, $moz:true, $webkit: true, $ms:true, $pie:true){
-  @if $moz      {-moz-border-radius:    $radius;}
-  @if $webkit   {-webkit-border-radius: $radius;}
-  @if $ms       {-ms-border-radius:     $radius;}
-  border-radius: $radius; }
 
 $margin-vars: ( 0 3 5 10 15 20 25 30 35 40);
 *[class*="margin-gap"] {
@@ -134,7 +93,7 @@ $margin-vars: ( 0 3 5 10 15 20 25 30 35 40);
 *[class*="margin-sidegap"] {
   @include gapmaker( $sizes:( $margin-vars ), $sides: (right left), $class: (side) ); }
 
-$padding-vars:( 0 5 10 15 20 25 30 35 40 );
+$padding-vars:( 0 5 10 15 20 25 30 35 40 50 60 );
 *[class*="padding-gap"] {
   @include gapmaker( $sizes:( $padding-vars ), $sides: (top right bottom left), $type: padding );
   @include clearfix; }

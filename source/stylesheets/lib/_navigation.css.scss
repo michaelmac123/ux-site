@@ -14,24 +14,41 @@
   min-height:       60px;
   padding:          10px 0 0 0;
   z-index:          10;
-  .navbar-nav > li {
-    display:inline-block;
-    list-style-type:none;
-    border:         none;
-    margin:         0 10px;
-    & > a {
-      @include prefix(transition,all 500ms, moz webkit ms o);
-      @include font-smoothing();
-      border-bottom:  5px solid transparent;
-      color:          $primary-text;
-      font:{
-        size:         1.1em;
-        weight:       normal; }
-      padding:        25px 10px 15px 10px;
-      &:hover {
-        @include prefix(transition,all 1000ms, moz webkit ms o);
-        border-bottom:    5px solid rgba($charcoal, .85);
-        color:            rgba($charcoal, .85); } } }
+  .navbar-header {
+    @include float;
+    width: 50%; }
+  .navbar-links {
+    @include float(right);
+    width:45%;  }
+
+  .navbar-nav {
+    text-align: right;
+    @include respond-to('medium') {
+      text-align: left; }
+    & > li {
+      display: block;
+      padding:        5px 0 5px 0;
+      @include respond-to('medium') {
+        display:inline-block;
+        padding:        25px 10px 15px 10px; }
+      list-style-type:none;
+      border:         none;
+      margin:         0 10px;
+      & > a {
+        @include prefix(transition,all 500ms, moz webkit ms o);
+        @include font-smoothing();
+        border-bottom:  5px solid transparent;
+        color:          $primary-text;
+        font:{
+          size:         1.1em;
+          weight:       normal; }
+        padding:        0;
+        @include respond-to('medium') {
+          padding:        0 0 10px 0; }
+        &:hover {
+          @include prefix(transition,all 1000ms, moz webkit ms o);
+          border-bottom:    5px solid rgba($charcoal, .85);
+          color:            rgba($charcoal, .85); } } }}
 
   .navbar-nav > .active > a,
   .navbar-nav > .active > a:hover,
@@ -42,17 +59,34 @@
     cursor:           default;  }
   .navbar-brand {
     color:          $charcoal;
-    font:{
-      size:         1.9em;
-      weight:       lighter; }
+    display:        block;
+    text-align:     center;
+    font-weight:    lighter;
     height:         auto;
-    padding:        5px 15px;
+    padding:        5px 10px;
+    text-align:     center;
+    @include respond-to('medium'){
+      display:      block;
+      font-size:    1.9em;
+      text-align:   left; }
+
+    &-brand {
+      width:100%;
+      @include respond-to('small') {
+        width: auto; }
+      &:after {
+        @include respond-to('small') {
+        content: "|";
+        padding-left: 10px; } } }
     &-img {
       height:       75px; }
     &-svg {
       @include prefix(transition,all 250ms, moz webkit ms o);
-      width:        60px;
-      fill:         $charcoal; }
+      width:        90px;
+      fill:         $charcoal;
+      @include respond-to('small'){
+        width:        60px;
+      } }
     &-small {
       font:{
         family:     $upper-class;

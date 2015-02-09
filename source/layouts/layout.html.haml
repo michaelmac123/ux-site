@@ -56,9 +56,7 @@
       %script{:src => "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
     :javascript
       if ( ($(window).height() + 300) < $(document).height() ) {
-          $('#top-link-block').removeClass('hidden').affix({
-              offset: { top:600 }
-          });
+
       }
     - if build?
       -# Google Analytics

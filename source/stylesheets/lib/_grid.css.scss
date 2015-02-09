@@ -16,8 +16,19 @@
       width: 100%; } }
 }
 
+@mixin col-percentage($max-cols:10) {
+  @for $i from 1 through $max-cols {
+    .colper-#{$i} {
+      width:  percentage($i/10); } }
+}
+
+@include col-percentage($max-cols:10);
+
 // X-Small
 @include respond-to('x-small') {
+  .container {
+    padding: 0 1em;
+  }
   $grid-cols: 8;
   @include with-layout($grid-cols) {
     // @include col-maker($grid-cols);
@@ -41,6 +52,9 @@
 
 // Small
 @include respond-to('small') {
+  .container {
+    padding: 0 1em;
+  }
   $grid-cols: 8;
   @include with-layout($grid-cols) {
     @include col-maker($grid-cols);
@@ -62,7 +76,7 @@
 // Medium
 @include respond-to('medium') {
   .container {
-    @include container(75em);
+    @include container(65em);
   }
 
   $grid-cols: $master-columns;

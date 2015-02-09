@@ -53,7 +53,7 @@ p {
 
 hr {
   border:{
-    top: .1em solid $white;
+    top: .1em solid lighten($med-blue, 15);
     right: none;
     bottom: none;
     left: none;}
@@ -63,6 +63,17 @@ hr {
     border:{
     bottom: .1em solid $white; }
   }
+}
+.light-hr {
+  border:{
+    top: .1em solid darken($bone, 10);
+    right: none;
+    bottom: none;
+    left: none;}
+}
+
+img {
+  max-width: 100%;
 }
 
 .bold {

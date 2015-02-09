@@ -4,10 +4,10 @@
     .navbar-header
       %a.navbar-brand{:href => "/"}
         = inline_svg('ux-logo', class: "navbar-brand-svg")
-        %span= "Michael McMillan |"
+        %span.navbar-brand-brand= "Michael McMillan"
         %span.navbar-brand-small UX Designer... Digital Poet
     .navbar-links
       %ul.navbar-nav
         = partial "layouts/navlinks"
 
-    %hr.section-body-spacer
+    %hr.section-body-nav-spacer

@@ -36,3 +36,5 @@ gem 'oj'
 
 # Faster JS
 gem "turbolinks", require: false
+
+gem "rails_12factor"

@@ -93,7 +93,7 @@ $margin-vars: ( 0 3 5 10 15 20 25 30 35 40);
 *[class*="margin-sidegap"] {
   @include gapmaker( $sizes:( $margin-vars ), $sides: (right left), $class: (side) ); }
 
-$padding-vars:( 0 5 10 15 20 25 30 35 40 50 60 );
+$padding-vars:( 0 5 10 11 15 20 25 30 35 40 50 60 );
 *[class*="padding-gap"] {
   @include gapmaker( $sizes:( $padding-vars ), $sides: (top right bottom left), $type: padding );
   @include clearfix; }

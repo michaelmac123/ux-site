@@ -5,6 +5,7 @@ source 'http://rubygems.org'
 ruby "2.1.5"
 
 gem "middleman", "~>3.3.2"
+gem "middleman-sprockets"
 
 gem "rack-contrib"
 
@@ -21,6 +22,9 @@ gem "middleman-livereload", "~> 3.1.0"
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+
+# Application Stats
+gem 'newrelic_rpm'
 
 # Smash PNGS
 gem 'middleman-smusher'

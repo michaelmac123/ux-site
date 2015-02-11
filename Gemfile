@@ -5,7 +5,6 @@ source 'http://rubygems.org'
 ruby "2.1.5"
 
 gem "middleman", "~>3.3.2"
-gem "middleman-sprockets"
 
 gem "rack-contrib"
 

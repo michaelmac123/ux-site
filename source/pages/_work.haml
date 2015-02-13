@@ -10,7 +10,7 @@
   .container
     .row.work
       -data.works.each do |work|
-        %div{ class: "col-3 work-container" }
+        %div{ class: "col-4 work-container" }
           .work-box
             .work-text
               .work-inner
@@ -18,7 +18,9 @@
                 %h6.work-title= work['title']
                 %p.work-subtitle= work['project']
                 %ul.work-list.list-unstyled
+                  %li.work-content
+                    %i Responsibilities:
                   - unless work['details'].blank?
                     - work['details'].each do |details|
                       %li.work-content= details
-                %a.work-button.btn.btn-theme-red{ href: "work/#{work['title'].parameterize}"} Explore
+                %a.work-button.btn.btn-theme-red.btn-lg{ href: "work/#{work['title'].parameterize}"} Explore

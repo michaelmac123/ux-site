@@ -1,7 +1,7 @@
 // Color pairs for standard colors.
 $colors: "charcoal" $charcoal, "white" $white, "light-blue" $light-blue, "med-blue" $med-blue, "dark-blue" $dark-blue, "bone" $bone, "khaki" $khaki, "tan" $tan;
 @each $color in $colors {
-  $key:   nth(unquote($color), 1);
+  $key:   nth($color, 1);
   $value: nth($color, 2);
   .#{$key} {
     color:  $value;

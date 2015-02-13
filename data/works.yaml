@@ -38,3 +38,23 @@
   details:
     - "UX Research"
     - "Static Prototypes"
+
+- work:
+  id: 5
+  icon: "ux-clipboard-svg"
+  name: "eLocal.com"
+  title: "eLocal.com"
+  project: "Mobile Design"
+  details:
+    - "UI Development"
+    - ""
+
+- work:
+  id: 6
+  icon: "ux-clipboard-svg"
+  name: "Prell"
+  title: "Prell"
+  project: "Landing Page Design"
+  details:
+    - "Landing Page Optimization"
+    - "UI Development"

@@ -1,56 +1,41 @@
 - work:
-  id: 1
-  icon: "ux-code-svg"
-  name: "Mitchell Contractors"
-  title: "Mitchell Contractors"
-  project: "Website Redesign"
+  id: 3
+  active: "false"
+  icon: "ux-pencil-svg"
+  name: "Bekaert"
+  title: "Bekaert"
+  project: "Landing Page Design"
   details:
-    - "UX"
-    - "Prototyping"
-    - "UI Development"
+    - "UX Design"
+    - "Static Prototypes"
 
 - work:
   id: 2
+  active: "false"
   icon: "ux-clipboard-svg"
   name: "eLocal.com"
   title: "eLocal.com"
   project: "Call Center Inteface"
   details:
-    - "UX Research"
+    - "UX Design"
+    - "Prototyping"
     - "UI Development"
 
 - work:
-  id: 3
+  id: 1
+  active: "false"
   icon: "ux-code-svg"
-  name: "Transform Digital"
-  title: "Transform Digital"
-  project: "Rapid Prototyping"
+  name: "Mitchell Contractors"
+  title: "Mitchell Contractors"
+  project: "Website Redesign"
   details:
-    - "UX Research"
-    - "Rapid Prototyping"
+    - "UX Design"
+    - "Prototyping"
+    - "UI Development"
 
 - work:
   id: 4
-  icon: "ux-clipboard-svg"
-  name: "Bekaert"
-  title: "Bekaert"
-  project: "Landing Page Design"
-  details:
-    - "UX Research"
-    - "Static Prototypes"
-
-- work:
-  id: 5
-  icon: "ux-clipboard-svg"
-  name: "eLocalPlumbers.com"
-  title: "eLocalPlumbers.com"
-  project: "Mobile Design"
-  details:
-    - "UI Development"
-    - ""
-
-- work:
-  id: 6
+  active: "false"
   icon: "ux-clipboard-svg"
   name: "Prell"
   title: "Prell"
@@ -58,3 +43,36 @@
   details:
     - "Landing Page Optimization"
     - "UI Development"
+
+- work:
+  id: 6
+  active: "false"
+  icon: "ux-code-svg"
+  name: "Transform Digital"
+  title: "Transform Digital"
+  project: "Rapid Prototyping"
+  details:
+    - "UX Design"
+    - "Rapid Prototyping"
+
+- work:
+  id: 6
+  active: "false"
+  icon: "ux-pencil-svg"
+  name: "eLocalPlumbers.com"
+  title: "eLocalPlumbers.com"
+  project: "Mobile Design"
+  details:
+    - "UI Development"
+    - "Responsive Design"
+
+- work:
+  id: 7
+  active: "false"
+  icon: "ux-camera-svg"
+  name: "Photo Retouching"
+  title: "Photo Retouching"
+  project: "Photo Retouching"
+  details:
+    - "Retouching Services"
+    - "Photoshop Services"

@@ -19,7 +19,11 @@ end
 # Works Page route
 data.works.each do |work|
   proxy "work/#{(work.name).parameterize}.html", "/work_template.html",
-  :locals => {  :name => work.name, :id => work.id },
+  :locals => {
+    :work => work,
+    :name => work.name,
+    :id => work.id
+  },
   :ignore => true
 end
 

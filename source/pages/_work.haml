@@ -9,7 +9,7 @@
 .content-section-a
   .container
     .row.work
-      -data.works.each do |work|
+      - data.works.each do |work|
         %div{ class: "col-4 work-container" }
           .work-box
             .work-text
@@ -23,4 +23,7 @@
                   - unless work['details'].blank?
                     - work['details'].each do |details|
                       %li.work-content= details
-                %a.work-button.btn.btn-theme-red.btn-lg{ href: "work/#{work['title'].parameterize}"} Explore
+                - if work['active'] == "true"
+                  %button.work-button.btn.btn-theme-red.btn-lg{ href: "work/#{work['title'].parameterize}"} Explore
+                - else
+                  %button.work-button.btn.btn-theme-red.btn-lg.btn-disabled{ href: "#"} Coming Soon

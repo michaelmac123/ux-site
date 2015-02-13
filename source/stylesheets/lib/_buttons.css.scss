@@ -27,7 +27,14 @@ $colors: "charcoal" $charcoal, "white" $white, "light-blue" $light-blue, "med-bl
     @include prefix(box-shadow, 0 0 5px rgba(darken($secondary, 10), .5) inset, moz webkit ms o);
     background: $secondary;
     border-bottom:     4px solid darken($secondary, 10);
-    color:      $text; } }
+    color:      $text; }
+  &.btn-disabled,
+  &.btn-disabled:hover {
+    @include prefix( box-shadow, 0 0 0 transparent inset , moz webkit ms o );
+    background:   rgba($primary, .45);
+    border-bottom:4px solid rgba(darken($primary, 10), .45);
+    cursor: default;
+  } }
 
 .btn {
   &.btn-charcoal {

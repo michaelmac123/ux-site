@@ -280,6 +280,25 @@
       top:              0; }
     a {
       cursor:           pointer; } }
+  &-description-list a {
+    @include prefix(transition, all 500ms, moz wekit o ms);
+    color:              $med-blue;
+    font-size:          1.35em;
+    &:before {
+      content: "";
+    }
+    &:hover {
+      @include prefix(transition, all 500ms, moz wekit o ms);
+      color:            $theme-red;
+      left:               -0.68em;
+      position:           relative;
+      &:before {
+        content: "~";
+        left:               -5px;
+        position:           relative;
+      }
+    }
+  }
   &-button {
     @extend .work-button !optional;
     opacity:            1;}

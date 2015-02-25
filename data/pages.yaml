@@ -10,3 +10,6 @@
 - pages:
   id: 4
   name: find me
+- pages:
+  id: 5
+  name: examples

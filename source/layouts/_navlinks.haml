@@ -2,6 +2,8 @@
   - if page['id'].to_s == '1'
     -# Find home page
     %li{nav_active("/")}= link_to "#{page['name'].upcase}", "/"
+  - elsif page['id'].to_s == '5'
+
   - else
     -# Link to other pages
     %li{nav_active("/#{page['name'].parameterize}/")}= link_to "#{page['name'].upcase}", "/#{(page.name).parameterize}"

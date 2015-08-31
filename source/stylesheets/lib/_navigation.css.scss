@@ -19,12 +19,13 @@
     width: 50%; }
   .navbar-links {
     @include float(right);
-    width:45%;  }
+    width:50%;  }
 
   .navbar-nav {
     text-align: right;
+    margin: 0;
     @include respond-to('medium') {
-      text-align: left; }
+      text-align: right; }
     & > li {
       display: block;
       padding:        5px 0 5px 0;

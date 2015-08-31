@@ -11,5 +11,9 @@
   id: 4
   name: find me
 - pages:
-  id: 5
-  name: examples
+  id: 6
+  name: case studies
+
+# - pages:
+#   id: 5
+#   name: examples

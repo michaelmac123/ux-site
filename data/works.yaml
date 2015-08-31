@@ -18,8 +18,8 @@
   project: "Call Center Inteface"
   details:
     - "UX Design"
-    - "Prototyping"
     - "UI Development"
+
 
 - work:
   id: 1
@@ -30,7 +30,6 @@
   project: "Website Redesign"
   details:
     - "UX Design"
-    - "Prototyping"
     - "UI Development"
 
 - work:

@@ -5,7 +5,7 @@
 /[if IE 9]      <html class="no-js lt-ie10 lt-ie9" lang="en-us">
 /[if lt IE 10]  <html class="no-js lt-ie10" lang="en-us">
 /[if !IE]>
-%html{lang: 'en', class: 'no-js'}
+%html{lang: 'en', class: 'no-js', ng:{ app: 'slides' } }
   /<![endif]
   %head
     %title #{data.page.title || "Michael McMillan | UX Designer"}
@@ -48,6 +48,9 @@
 
     -# Javascripts
     = javascript_include_tag '//cdn.jsdelivr.net/headroomjs/0.5.0/headroom.min.js'
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular.min.js'
+    = javascript_include_tag '//ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js'
+    = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js'
     = javascript_include_tag 'application'
     / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
     / WARNING: Respond.js doesn't work if you view the page via file://

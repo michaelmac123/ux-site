@@ -1,0 +1,11 @@
+/ Page Content
+.content-section-a{ ng:{ controller: "SlideController" } }
+  .container.slider
+    <img ng-repeat="slide in slides" ng-src="/images/{{slide.image}}" ng-hide="!isCurrentSlideIndex($index)" alt_name="{{slide.description}}" class="slide slide-animation">
+    %span{ class: "arrow prev", ng:{click: "nextSlide()" }}
+    %span{ class: "arrow next", ng:{click: "prevSlide()" }}
+    .nav
+      .wrapper
+        %ul.dots
+          %li.dot{ ng:{repeat: "slide in slides"} }
+            %span{ ng:{ class: "{'active':isCurrentSlideIndex($index)}", click: "setCurrentSlideIndex($index);"} }

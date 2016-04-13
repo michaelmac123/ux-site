@@ -1,15 +1,17 @@
 .slider {
-    width: 900px;
-    min-height:685px;
+    min-height:250px;
     overflow: hidden;
     position: relative;
-    background: #e6e6e6;
-    border: 20px solid #FFF;
+    background: $white;
+    border:{
+        top: 20px solid $white;
+        bottom: 20px solid $white;}
     margin-top: 20px;
+    width: 100%;
 }
 
 .slide {
-    position: absolute;
+    // position: absolute;
     top: 0;
     left: 0;
 }

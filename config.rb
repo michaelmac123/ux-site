@@ -18,7 +18,7 @@ end
 
 # Works Page route
 data.works.each do |work|
-  proxy "work/#{(work.name).parameterize}.html", "/work_template.html",
+  proxy "/work/#{(work.title).parameterize}.html", "/work_template.html",
   :locals => {
     :work => work,
     :name => work.name,

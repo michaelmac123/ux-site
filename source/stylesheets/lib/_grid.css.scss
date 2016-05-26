@@ -6,6 +6,22 @@
       @include gutters($max-cols $gutter-width after); } }
 }
 
+@mixin col-push-maker($max-cols:12) {
+  @for $i from 1 through $max-cols {
+    .col-push-#{$i} {
+      @include push($i of $max-cols);
+    }
+  }
+}
+
+@mixin col-pull-maker($max-cols:12) {
+  @for $i from 1 through $max-cols {
+    .col-pull-#{$i} {
+      @include pull($i of $max-cols);
+    }
+  }
+}
+
 // For break points
 // Create columns: max-col - master-columns number (eg. 1-12)
 // And set to 100%
@@ -46,6 +62,18 @@
                 right: 0; }
         }
       }
+    }
+    *[class*="col-push"] {
+      float:none;
+      margin:{
+        right:auto !important;
+        left:auto; }
+    }
+    *[class*="col-pull"] {
+      float:none;
+      margin:{
+        right:auto;
+        left:auto; }
     }
   }
 }
@@ -93,6 +121,19 @@
           right: 0; }
       }
     }
+
+    *[class*="col-push"] {
+      float:none;
+      margin:{
+        right:auto !important;
+        left:auto; }
+    }
+    *[class*="col-pull"] {
+      float:none;
+      margin:{
+        right:auto;
+        left:auto; }
+    }
   }
 }
 
@@ -105,6 +146,8 @@
   $grid-cols: $master-columns;
   @include with-layout($grid-cols) {
     @include col-maker($grid-cols);
+    @include col-push-maker($grid-cols);
+    @include col-pull-maker($grid-cols);
     .row {
       @include clearfix;
       width: 100%;

@@ -24,6 +24,7 @@
                     - work['details'].each do |details|
                       %li.work-content= details
                 - if work['active'] == "true"
-                  %button.work-button.btn.btn-theme-red.btn-lg{ href: "work/#{work['title'].parameterize}"} Explore
+                  
+                  = link_to "Explore", "/work/#{(work.title).parameterize}", class: "work-button btn btn-theme-red btn-lg"
                 - else
                   %button.work-button.btn.btn-theme-red.btn-lg.btn-disabled{ href: "#"} Coming Soon

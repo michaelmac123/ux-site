@@ -1,77 +1,105 @@
 - work:
-  id: 3
-  active: "false"
-  icon: "ux-pencil-svg"
-  name: "Bekaert"
-  title: "Bekaert"
-  project: "Landing Page Design"
-  details:
-    - "UX Design"
-    - "Static Prototypes"
-
-- work:
   id: 2
   active: "false"
   icon: "ux-clipboard-svg"
   name: "eLocal.com"
-  title: "eLocal.com"
-  project: "Call Center Inteface"
+  title: "eLocal Affiliates"
+  project: "Affiliate Onboarding"
   details:
     - "UX Design"
-    - "UI Development"
-
+    - "UI Layout"
+  overview: "Create a simpler way to onboard affiliates and allow the operations team to track all steps in the process."
+  requirements: 
+    - "Create Dashboard for onboarding process"
+    - "Give clear indication what steps have been completed"
+    - "Automate specific steps."
+  role:
+    - "Experience Strategy"
+    - "Construct basic UI interactions and flow."
+    - "Create working prototype to demonstrate flow."
+    - "Design & Develop UI overall look and feel."
 
 - work:
   id: 1
   active: "false"
-  icon: "ux-code-svg"
-  name: "Mitchell Contractors"
-  title: "Mitchell Contractors"
-  project: "Website Redesign"
-  details:
-    - "UX Design"
-    - "UI Development"
-
-- work:
-  id: 4
-  active: "false"
   icon: "ux-clipboard-svg"
-  name: "Prell"
-  title: "Prell"
-  project: "Landing Page Design"
-  details:
-    - "Landing Page Optimization"
-    - "UI Development"
-
-- work:
-  id: 6
-  active: "false"
-  icon: "ux-code-svg"
-  name: "Transform Digital"
-  title: "Transform Digital"
-  project: "Rapid Prototyping"
+  name: "eLocal.com"
+  title: "eLocal Call Center"
+  project: "Call Center Interface"
   details:
     - "UX Design"
     - "Rapid Prototyping"
+    - "UI Development"
+
+  overview: "Develop a stand-alone call center interface that will assists the call center personel to correctly and efficiently route IVR and direct calls to paying advertisers."
+  requirements: 
+    - "Limited page reloads."
+    - "Give clear indication of state-changes."
+    - "Alert user of incoming calls."
+    - "Allow for user to interact with calls via the UI."
+    - "Guide user through necessary steps to connect callers to advertisers."
+  role:
+    - "Experience Strategy"
+    - "Construct basic UI interactions and flow."
+    - "Create working prototype to demonstrate flow."
+    - "Design & Develop UI overall look and feel."
+    - "Deliver CSS/SCSS architecture."
 
 - work:
-  id: 6
+  id: 3
   active: "false"
   icon: "ux-pencil-svg"
   name: "eLocalPlumbers.com"
-  title: "eLocalPlumbers.com"
+  title: "eLocal Plumbers"
   project: "Mobile Design"
   details:
     - "UI Development"
     - "Responsive Design"
+  overview: "Develop a stand-alone call center interface that will assists the call center personel to correctly and efficiently route IVR and direct calls to paying advertisers."
+  requirements: 
+    - "Limited page reloads."
+    - "Give clear indication of state-changes."
+    - "Alert user of incoming calls."
+    - "Allow for user to interact with calls via the UI."
+    - "Guide user through necessary steps to connect callers to advertisers."
+  role:
+    - "Experience Strategy"
+    - "Construct basic UI interactions and flow."
+    - "Create working prototype to demonstrate flow."
+    - "Design & Develop UI overall look and feel."
+    - "Deliver CSS/SCSS architecture."
 
-- work:
-  id: 7
-  active: "false"
-  icon: "ux-camera-svg"
-  name: "Photo Retouching"
-  title: "Photo Retouching"
-  project: "Photo Retouching"
-  details:
-    - "Retouching Services"
-    - "Photoshop Services"
+
+
+# - work:
+#   id: 4
+#   active: "false"
+#   icon: "ux-code-svg"
+#   name: "Transform Digital"
+#   title: "Transform Digital"
+#   project: "Rapid Prototyping"
+#   details:
+#     - "UX Design"
+#     - "Rapid Prototyping"
+
+# - work:
+#   id: 5
+#   active: "false"
+#   icon: "ux-pencil-svg"
+#   name: "Bekaert"
+#   title: "Bekaert"
+#   project: "Landing Page Design"
+#   details:
+#     - "UX Design"
+#     - "Static Prototypes"
+
+# - work:
+#   id: 6
+#   active: "false"
+#   icon: "ux-code-svg"
+#   name: "Mitchell Contractors"
+#   title: "Mitchell Contractors"
+#   project: "Website Redesign"
+#   details:
+#     - "UX Design"
+#     - "UI Development"

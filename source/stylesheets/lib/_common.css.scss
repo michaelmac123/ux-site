@@ -19,7 +19,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  background-color: darken($navy, 20);
+  background-color: $white;
   color:            $med-blue;
   font:{
     family:         $work-class;

@@ -1,19 +1,12 @@
 - pages:
   id: 1
-  name: home
-- pages:
-  id: 2
   name: work
 - pages:
-  id: 3
-  name: cv
+  id: 5
+  name: about
 - pages:
   id: 4
   name: find me
 - pages:
-  id: 6
-  name: case studies
-
-# - pages:
-#   id: 5
-#   name: examples
+  id: 3
+  name: cv

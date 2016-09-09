@@ -47,7 +47,7 @@ helpers do
     when '4'
       partial "pages/find-me", :locals => {:id => s }
     when '5'
-      partial "pages/examples", :locals => {:id => s }
+      partial "pages/about", :locals => {:id => s }
     when '6'
       partial "pages/case-studies", :locals => {:id => s }
     else

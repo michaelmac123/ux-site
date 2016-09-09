@@ -40,29 +40,60 @@
 
 @include col-percentage($max-cols:10);
 
-// X-Small
-@include respond-to('x-small') {
+
+// Large
+@include respond-to('large') {
   .container {
-    padding: 0 1em;
+    @include container(75em);
   }
-  $grid-cols: 8;
+
+  $grid-cols: $master-columns;
   @include with-layout($grid-cols) {
-    // @include col-maker($grid-cols);
+    @include col-maker($grid-cols);
+    @include col-push-maker($grid-cols);
+    @include col-pull-maker($grid-cols);
     .row {
       @include clearfix;
       width: 100%;
       // Remove last cols right margin
       // so the div won't get shifted to
       // next line
-      *[class*="col-"]{
-        @include float;
-        width:100%;
-        &:last-of-type {
-              margin:{
-                right: 0; }
-        }
+      *[class*="col-"]:last-of-type {
+        margin:{
+          right: 0; }
       }
     }
+  }
+}
+@include respond-to('medium-max') {
+  .container {
+    @include container(65em);
+    padding: 0 1em;
+  }
+}
+
+// Medium
+@include respond-to('medium') {
+  .container {
+    @include container(65em);
+    padding: 0 1em;
+  }
+
+  $grid-cols: $master-columns;
+  @include with-layout($grid-cols) {
+    @include col-maker($grid-cols);
+    .row {
+      @include clearfix;
+      width: 100%;
+      // Remove last cols right margin
+      // so the div won't get shifted to
+      // next line
+      *[class*="col-"]:last-of-type {
+        margin:{
+          right: 0; }
+      }
+    }
+
     *[class*="col-push"] {
       float:none;
       margin:{
@@ -101,27 +132,29 @@
   }
 }
 
-// Medium
-@include respond-to('medium') {
+// X-Small
+@include respond-to('x-small') {
   .container {
-    @include container(65em);
+    padding: 0 1em;
   }
-
-  $grid-cols: $master-columns;
+  $grid-cols: 8;
   @include with-layout($grid-cols) {
-    @include col-maker($grid-cols);
+    // @include col-maker($grid-cols);
     .row {
       @include clearfix;
       width: 100%;
       // Remove last cols right margin
       // so the div won't get shifted to
       // next line
-      *[class*="col-"]:last-of-type {
-        margin:{
-          right: 0; }
+      *[class*="col-"]{
+        @include float;
+        width:100%;
+        &:last-of-type {
+              margin:{
+                right: 0; }
+        }
       }
     }
-
     *[class*="col-push"] {
       float:none;
       margin:{
@@ -137,27 +170,55 @@
   }
 }
 
-// Large
-@include respond-to('large') {
-  .container {
-    @include container(75em);
-  }
-
-  $grid-cols: $master-columns;
-  @include with-layout($grid-cols) {
-    @include col-maker($grid-cols);
-    @include col-push-maker($grid-cols);
-    @include col-pull-maker($grid-cols);
-    .row {
-      @include clearfix;
-      width: 100%;
-      // Remove last cols right margin
-      // so the div won't get shifted to
-      // next line
-      *[class*="col-"]:last-of-type {
-        margin:{
-          right: 0; }
+// This is useful if you need to balance columns inside
+// a larger container see. Advertising ad-type chooser.
+@mixin make-cols-sizer($total-columns, $margin: 1em, $i:1 ) {
+  @for $i from $i through $total-columns {
+    $width: (100% / $total-columns);
+    $less_margin: ($margin + ($margin/$total-columns));
+    .column--#{$i}-#{$total-columns} {
+      @include float;
+      @if $i == $total-columns {
+        margin-right: $margin; }
+      margin:{
+        top: $margin;
+        left: $margin; }
+      @if $margin == 0{
+        width: calc(#{$width}); }
+      @else {
+        width: calc(#{$width} - #{$less_margin}); }
+    }
+    // make responsive if less than 8 columns
+    @include respond-to('medium') {
+      $cols: (1/ceil($total-columns/2));
+      $width: ($cols);
+      .column--#{$i}-#{$total-columns} {
+        @if $margin == 0 {
+          @if percentage($width) == 100% {
+            width: calc(#{percentage($width)});
+          }@else {
+             width: calc(#{percentage($width)}); }
+        } @else {
+          @if percentage($width) == 100% {
+            width: calc(#{percentage($width)} - #{($margin * 2)});
+          }@else {
+             width: calc(#{percentage($width)} - #{($margin + ($cols))});
+          }
+        }
+      }
+    }
+    @include respond-to('small') {
+      $width: (100%);
+      .column--#{$i}-#{$total-columns} {
+        @if $margin == 0 {
+          width: calc(#{$width});
+        } @else {
+          width: calc(#{$width} - #{($margin * 2)});
+        }
       }
     }
   }
 }
+@include make-cols-sizer(2, 0);
+@include make-cols-sizer(3, 0);
+@include make-cols-sizer(4, 0);

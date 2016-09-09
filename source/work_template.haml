@@ -2,7 +2,7 @@
 / Header
 - data.works.each_with_index do |wrk, i|
   - if wrk['id'] == locals[:id]
-    .intro-header  
+    .intro-header
       .container
         .row
           .col-12
@@ -17,17 +17,17 @@
                         %hr.section-heading-spacer
                         %p.clear-left= wrk['overview']
                       .col-lg-4.col-xs6
-                        %h3.text-left.margin-bottomgap5 Project Requirements
-                        %hr.section-heading-spacer
-                        %ul.clear-left
-                          - wrk['requirements'].each do |req|
-                            %li= req
-                      .col-lg-4.col-xs6
                         %h3.text-left.margin-bottomgap5 Project Role
                         %hr.section-heading-spacer
                         %ul.clear-left
                           - wrk['role'].each do |role|
                             %li= role
+                      .col-lg-4.col-xs6
+                        %h3.text-left.margin-bottomgap5 Project Requirements
+                        %hr.section-heading-spacer
+                        %ul.clear-left
+                          - wrk['requirements'].each do |req|
+                            %li= req
                   .col-7.col-push-1
                     = image_tag "work/#{wrk['title'].parameterize}/hero-#{wrk['title'].parameterize}.png", class: "img-responsive"
     = partial "work/#{wrk['title'].parameterize}"

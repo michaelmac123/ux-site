@@ -1,168 +1,73 @@
 ---
-title: Michael McMillan | UX Designer
+title: Michael McMillan | Creative Director
 body_class: index
 ---
 = partial "layouts/navigation"
 / = partial "layouts/header"
-.content-section-a
-  .container
-    .row
-      .col-7
-        %h2.section-heading.margin-bottomgap0.med-blue
-          Who Am I?
-        %hr.section-heading-spacer
-        %p.clear-left.section-body-text
-          I am the perfect combination of right and left brained. I have the ability to envision coupled with the ability to build. The end result is something that is appealing and works well whether it is taste, design or functionality. My career started in culinary, however has ended up in technology and everything I have learned from the start of my career to current day has been self-taught. I am obsessive to learn and then master it- whatever “it” is. I love technology as it is consistently evolving, challenging me and allowing me to innovate. To couple creative and technology with brand strategy is where I thrive.
-        %p.clear-left.section-body-text
-          On a more personal note, I love the outdoors and relocated my family from Philadelphia to Seattle to enjoy the landscape that the Pacific North West has to offer, while sitting in the hub of the technology arena.
-      .col-5.skill
-        %h2.section-heading.margin-bottomgap0.med-blue
-          Skills
-        %hr.section-heading-spacer
-          .colper-9.margin-topgap20.margin-bottomgap5{ style: "background-color:lightblue;"}
-            %p.margin-gap0.padding-gap10 User Experience
+/ Page Content
+.content-section-a.clearfix
+  %div{ class: "column--1-3 work-container" }
+    %a{ href: '/work/elocal-affiliates' }
+      .work-box
+        = image_tag "work/elocal-affiliates/hero-elocal-affiliates.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title><
+                %span.block UX & Visual Design
+                %span.block.small eLocal Affilates
+              %p.work-subtitle ~ view ~
+  %div{ class: "column--2-3 work-container" }
+    %a{ href: '/work/dream-dinners' }
+      .work-box
+        = image_tag "work/dream-dinners/thumb-dream-dinners.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title><
+                %span.block Food Photography & Design
+                %span.block.small Dream Dinners
+              %p.work-subtitle ~ view ~
+  %div{ class: "column--3-3 work-container" }
+    %a{ href: '/work/elocal-affiliates' }
+      .work-box
+        = image_tag "work/loving-with-food/thumb-loving-with-food.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title><
+                %span.block Visual Design
+                %span.block.small Loving With Food
+              %p.work-subtitle ~ view ~
 
-          .colper-8.margin-bottomgap5.clear-both{ style: "background-color:lightpink;"}
-            %p.margin-gap0.padding-gap10 Information Architecture
-
-          .colper-10.margin-bottomgap5{ style: "background-color:gainsboro;"}
-            %p.margin-gap0.padding-gap10 Visual Design (Photoshop/Illustrator)
-
-          .colper-7.clear-both.margin-bottomgap5{ style: "background-color:plum;"}
-            %p.margin-gap0.padding-gap10 Research
-
-          .colper-9.margin-bottomgap5{ style: "background-color:lightgreen;"}
-            %p.margin-gap0.padding-gap10 Wireframing
-
-          .colper-10.margin-bottomgap5{ style: "background-color:wheat;"}
-            %p.margin-gap0.padding-gap10 Rapid Prototyping (HTML/CSS/JS)
-
-          .colper-10.margin-bottomgap15{ style: "background-color:salmon;"}
-            %p.margin-gap0.padding-gap10 User Interaction Design
-
-.content-section-a
-  .container
-    .row
-      .col-12
-        %h2.section-heading.margin-bottomgap0.med-blue
-          Tying it all together
-          %small (select below to learn more)
-        %p.about-content
-          I’ve worn many hats in my career — I’ve had a lot of roles and understand their different needs, but what do they all have in common?
-          My consumer obsession, desire to create something fantastic for them and my ablility to bring that creation to life on the web.
-
-
-        .about-list-circles
-          // connect each with thin line
-          %a.about-list-circles-links{href:"#panel_1"}
-            = inline_svg('ux-chef-svg', class: "about-svg")
-          %span.about-list-title Chef
-
-        .about-list-circles
-          %a.about-list-circles-links{href:"#panel_2"}
-            = inline_svg('ux-lightbulb-svg', class: "about-svg")
-          %span.about-list-title Marketing Specialist
-
-        .about-list-circles
-          %a.about-list-circles-links{href:"#panel_3"}
-            = inline_svg('ux-pencil-svg', class: "about-svg")
-          %span.about-list-title Graphic Designer
-
-        .about-list-circles
-          %a.about-list-circles-links{href:"#panel_4"}
-            = inline_svg('ux-code-svg', class: "about-svg")
-          %span.about-list-title Web Developer
-
-        .about-list-circles
-          %a.about-list-circles-links{href:"#panel_5"}
-            // svg
-            = inline_svg('ux-clipboard-svg', class: "about-svg")
-          %span.about-list-title UX Designer
-
-.content-section-a
-  .container
-    .row.about-box-panel#panel_1
-      .col-12
-        %h2.section-sub-heading Chef
-        %hr.clear-both
-        %p.about-content
-          I feel at times that I was a foodie-hipster well before they were cool. As a chef, I insisted on the highest standard and established a high-quality product that earned 2 James Beard awards—Best Chef Mid-Atlantic, Best Single Subject Cookbook. Co-developed, planned strategy and assisted in layout of an award-winning cookbook and was personally recognized by the Executive Chef/Owner in credits. Oversaw all development, production and presentation for James Beard Event Dinner.
-        %ul.list-inline.about-list-tubes
-          %li Sauces
-          %li Stews
-          %li Knife Skills
-          %li Grilling
-          %li Ceviche
-          %li Saute
-          %li Pastry
-          %li Creative
-
-    .row.about-box-panel#panel_2
-      .col-12
-        %h2.section-sub-heading Marketing Specialist
-        %hr.clear-both
-        %p.about-content
-          Taking my love of food, I began channeling that inner creativeness and began using it to drive customer interactions through my marketing efforts. I started using twitter in it's early days as a means to open a small window of discussion with the local community during my efforts with a small real estate company. I successfully developed and designed all internal and external communications to support all marketing campaigns including email invitations, online ad/landing page content, and newsletter sponsorships.
-        %ul.list-inline.about-list-tubes
-          %li Market Research
-          %li Strategic Directions
-          %li Public Relations
-          %li Content Strategy
-          %li Email Marketing
-          %li Online Advertising
-
-    .row.about-box-panel#panel_3
-      .col-12
-        %h2.section-sub-heading Graphic Designer
-        %hr.clear-both
-        %p.about-content
-          Obsessing over clients’ brand’s identity can enlighten you to your inner weaknesses and challenge you to become better at what you love. I love to take that challenge and find new ways to be inventive using techniques to provide relevant design schemes and using color and shape to translate the emotion of a client's design. In essence, design should look and feel light and non-invasive as if you feel the section is just an exension of the whole, much like a sauce in cooking is a way to accent the main ingredients. Simple... a fantastic guiding principle.
-
-        %ul.list-inline.about-list-tubes
-          %li Branding
-          %li Illustrator
-          %li Photoshop
-          %li Photography
-          %li Logo Design
-
-    .row.about-box-panel#panel_4
-      .col-12
-        %h2.section-sub-heading Web Developer
-        %hr.clear-both
-        %p.about-content
-          Knowing the ingredients is a great place to start. But unless you can slice, dice, and your product will never have backbone. Early on, I discovered a love for the intricate details of web development (and the sadness of IE6). Pushing the CSS envelope, I moved to LESS then SASS and have the ablitiy to harness its greatness. Working on complex applications with dynamic data forces me to think on a large scale and be a master of flexible layout, thinking beyond basic, static, Photoshop layouts. Building rapid prototypes allows for quick iteration of concepts and experiences that enables immediate consumer interaction.
-        %ul.list-inline.about-list-tubes
-          %li WebDesign
-          %li CSS/SASS
-          %li HTML/HAML
-          %li Javascript/Coffeescript
-          %li Ruby on Rails
-          %li Responsive
-          %li WordPress
-    .row.about-box-panel#panel_5
-      .col-12
-        %h2.section-sub-heading UX Designer
-        %hr.clear-both
-        %p.about-content
-          How'd we get here? Designing for the interaction only seemed to be the next step in customer service. Figuring out why the user does what she does is challenging and exciting. Following best practices, then throwing best practices out the window after user testing proves otherwise, is a great way to stick it to all those internet trolls. Identifing users, staying open minded about their needs  and finding common patterns in their interactions with products, allows you to develope products that will earn their trust and deliver high levels on satisfaction.
-        %ul.list-inline.about-list-tubes
-          %li Rapid Prototyping
-          %li UX Research
-          %li Balsamiq
-          %li User Scenarios
-          %li Proto Personas
-          %li Card Sorting
-
-:javascript
-  $(document).ready(function(){
-    $('.about-box-panel').hide();
-
-    $('.about-list-circles a').bind('click', function(e){
-      $('.about-list-circles a.current').removeClass('current');
-      $('.about-box-panel:visible').hide();
-      $(this.hash).fadeIn('2000');
-      $(this).addClass('current');
-      e.preventDefault();
-    }).filter(':first').click();
-
-  });
+  %div{ class: "column--1-3 work-container" }
+    %a{ href: '/work/elocal-affiliates' }
+      .work-box
+        = image_tag "work/placeholder-img.jpg", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title design title
+              %p.work-subtitle ~ view ~
+  %div{ class: "column--2-3 work-container" }
+    %a{ href: '/work/elocal-call-center' }
+      .work-box
+        = image_tag "work/elocal-call-center/hero-elocal-call-center.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title><
+                %span.block UX & Visual Design
+                %span.block.small eLocal Call Center
+              %p.work-subtitle ~ view ~
+  %div{ class: "column--3-3 work-container" }
+    %a{ href: '/work/lifestyle-dream-dinners' }
+      .work-box
+        = image_tag "work/lifestyle-dream-dinners/thumb-lifestyle-dream-dinners.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title
+                %span.block Lifestyle Photography
+                %span.block.small Dream Dinners
+              %p.work-subtitle ~ view ~

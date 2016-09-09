@@ -4,14 +4,13 @@
   $primary-text:    $charcoal;
   @include prefix(border-radius, 0, moz webkit);
   background-color: $white;
-  // background-image: url('/images/bg-img.png');
   border:{
     top:            25px solid $theme-red;
     right:          0;
     bottom:         0;
     left:           0; }
   margin-bottom:    0;
-  min-height:       60px;
+  min-height:       120px;
   padding:          10px 0 0 0;
   z-index:          10;
   .navbar-header {
@@ -19,96 +18,113 @@
     width: 50%; }
   .navbar-links {
     @include float(right);
-    width:50%;  }
+    width: 50%;  }
 
   .navbar-nav {
     text-align: right;
     margin: 0;
-    @include respond-to('medium') {
-      text-align: right; }
+    padding-left: 0;
     & > li {
-      display: block;
-      padding:        5px 0 5px 0;
-      @include respond-to('medium') {
-        display:inline-block;
-        padding:        25px 10px 15px 10px; }
+      display: inline-block;
       list-style-type:none;
-      border:         none;
-      margin:         0 10px;
+      border: none;
+      margin: 0 10px;
+      padding: 25px 10px 15px 10px;
+      @include respond-to('small') {
+        padding: 5px 0 5px 0;
+      }
+      @include respond-to('small') {
+        display: block;
+      }
       & > a {
         @include prefix(transition,all 500ms, moz webkit ms o);
         @include font-smoothing();
         border-bottom:  5px solid transparent;
-        color:          $primary-text;
+        color: $primary-text;
         font:{
-          size:         1.1em;
-          weight:       normal; }
-        padding:        0;
-        @include respond-to('medium') {
-          padding:        0 0 10px 0; }
+          size: 1.1em;
+          weight: normal; }
+        padding: 0 0 10px 0;
+        @include respond-to('small') {
+          padding: 0; }
         &:hover {
           @include prefix(transition,all 1000ms, moz webkit ms o);
-          border-bottom:    5px solid rgba($charcoal, .85);
-          color:            rgba($charcoal, .85); } } }}
+          border-bottom: 5px solid rgba($charcoal, .85);
+          color: rgba($charcoal, .85); } } }}
 
   .navbar-nav > .active > a,
   .navbar-nav > .active > a:hover,
   .navbar-nav > .active > a:focus {
     background-color: transparent;
-    border-bottom:    5px solid $theme-red;
-    color:            $theme-red;
-    cursor:           default;  }
+    border-bottom: 5px solid $theme-red;
+    color: $theme-red;
+    cursor: default;  }
   .navbar-brand {
-    color:          $charcoal;
-    display:        block;
-    text-align:     center;
-    font-weight:    lighter;
-    height:         auto;
-    padding:        5px 10px;
-    text-align:     center;
+    color: $charcoal;
+    display: block;
+    font:{
+      weight: lighter;
+      size: 2em;
+    }
+    height: auto;
+    line-height: 80%;
+    padding: 5px 10px;
+    text-align:   left;
     @include respond-to('medium'){
-      display:      block;
-      font-size:    1.9em;
-      text-align:   left; }
+      font-size: 1.5em;
+    }
+    @include respond-to('small'){
+      font-size: 1.2em;
+      text-align: center;
+    }
 
     &-brand {
-      width:100%;
+      width: auto;
       @include respond-to('small') {
-        width: auto; }
+        width:100%;
+      }
       &:after {
-        @include respond-to('small') {
         content: "|";
-        padding-left: 10px; } } }
+        padding-left: 10px;
+        @include respond-to('small') {
+          content: "";
+          padding-left: 0px;
+        }
+      }
+    }
+
     &-img {
-      height:       75px; }
+      height:       75px;
+    }
     &-svg {
       @include prefix(transition,all 250ms, moz webkit ms o);
-      width:        90px;
-      fill:         $charcoal;
-      @include respond-to('small'){
-        width:        60px;
-      } }
+      width: 60px;
+      fill: $charcoal;
+      @include respond-to('medium'){
+        width: 50px;
+      }
+    }
     &-small {
       font:{
-        family:     $upper-class;
-        size:       .7em;
-        style:      italic; }
-      position:     relative;
-      top:          .16em; }
+        family: $upper-class;
+        size: .7em;
+        style: italic; }
+      position: relative;
+      top: .16em; }
     &:hover {
       @include prefix(transition,all 250ms, moz webkit ms o);
-      color:        $theme-red;
+      color: $theme-red;
       .navbar-brand-svg {
         @include prefix(transition,all 250ms, moz webkit ms o);
-        fill:       $theme-red;
+        fill: $theme-red;
       } }
     span {
-      display:      inline-block;
+      display: inline-block;
       vertical-align:middle; } }
   .navbar-toggle {
     background-color: rgba($primary-text, .5);
-    margin-top:     7.5%;
-    padding:        10px; } }
+    margin-top: 7.5%;
+    padding: 10px; } }
 
 .vignette {
   background: radial-gradient(ellipse at center,  rgba($white,.25) 0%,rgba($white,0) 100%); }

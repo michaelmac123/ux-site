@@ -1,6 +1,6 @@
 - work:
   id: 2
-  active: "false"
+  active: "true"
   icon: "ux-clipboard-svg"
   name: "eLocal.com"
   title: "eLocal Affiliates"
@@ -9,7 +9,7 @@
     - "UX Design"
     - "UI Layout"
   overview: "Create a simpler way to onboard affiliates and allow the operations team to track all steps in the process."
-  requirements: 
+  requirements:
     - "Create Dashboard for onboarding process"
     - "Give clear indication what steps have been completed"
     - "Automate specific steps."
@@ -21,7 +21,7 @@
 
 - work:
   id: 1
-  active: "false"
+  active: "true"
   icon: "ux-clipboard-svg"
   name: "eLocal.com"
   title: "eLocal Call Center"
@@ -32,7 +32,7 @@
     - "UI Development"
 
   overview: "Develop a stand-alone call center interface that will assists the call center personel to correctly and efficiently route IVR and direct calls to paying advertisers."
-  requirements: 
+  requirements:
     - "Limited page reloads."
     - "Give clear indication of state-changes."
     - "Alert user of incoming calls."
@@ -47,7 +47,7 @@
 
 - work:
   id: 3
-  active: "false"
+  active: "true"
   icon: "ux-pencil-svg"
   name: "eLocalPlumbers.com"
   title: "eLocal Plumbers"
@@ -56,7 +56,7 @@
     - "UI Development"
     - "Responsive Design"
   overview: "Develop a stand-alone call center interface that will assists the call center personel to correctly and efficiently route IVR and direct calls to paying advertisers."
-  requirements: 
+  requirements:
     - "Limited page reloads."
     - "Give clear indication of state-changes."
     - "Alert user of incoming calls."
@@ -69,37 +69,46 @@
     - "Design & Develop UI overall look and feel."
     - "Deliver CSS/SCSS architecture."
 
+- work:
+  id: 4
+  active: "true"
+  icon: "ux-pencil-svg"
+  name: "Dream Dinners"
+  title: "Dream Dinners"
+  project: "Food Photography"
+  details:
+    - "Creative Direction"
+    - "Food Photography"
+    - "Layout Design"
+  overview: "Create interesting images for the Dream Dinners brand that showcases the diverse range of meals available to consumers. "
+  role:
+    - "Creative Direction"
+    - "Food Photography"
+    - "Food Styling"
+    - "Layout Design"
+  requirements:
+    - "Create balanced food images for both web & print."
+    - "Provide layout options for mulitple media channels."
+    - "Accurately depict serving size and meal ratios."
 
-
-# - work:
-#   id: 4
-#   active: "false"
-#   icon: "ux-code-svg"
-#   name: "Transform Digital"
-#   title: "Transform Digital"
-#   project: "Rapid Prototyping"
-#   details:
-#     - "UX Design"
-#     - "Rapid Prototyping"
-
-# - work:
-#   id: 5
-#   active: "false"
-#   icon: "ux-pencil-svg"
-#   name: "Bekaert"
-#   title: "Bekaert"
-#   project: "Landing Page Design"
-#   details:
-#     - "UX Design"
-#     - "Static Prototypes"
-
-# - work:
-#   id: 6
-#   active: "false"
-#   icon: "ux-code-svg"
-#   name: "Mitchell Contractors"
-#   title: "Mitchell Contractors"
-#   project: "Website Redesign"
-#   details:
-#     - "UX Design"
-#     - "UI Development"
+- work:
+  id: 5
+  active: "true"
+  icon: "ux-pencil-svg"
+  name: "Dream Dinners"
+  title: "Lifestyle Dream Dinners"
+  project: "Lifestyle Photography"
+  details:
+    - "Creative Direction"
+    - "Art Direction"
+    - "Lifestyle Photography"
+  overview: "Create interesting images for the Dream Dinners brand that showcases the diverse range of meals available to consumers. "
+  role:
+    - "Creative Direction"
+    - "Food Photography"
+    - "Food Styling"
+    - "Layout Design"
+  requirements:
+    - "Create balanced food images for both web & print."
+    - "Provide layout options for mulitple media channels."
+    - "Accurately depict serving size and meal ratios."

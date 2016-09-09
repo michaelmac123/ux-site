@@ -3,11 +3,36 @@
   .container
     .row
       .col-7
-        %h2.section-heading.margin-bottomgap0.med-blue
-          Feature Works
+        %h2.section-sub-heading
+          Design Work
 
-.content-section-a
-  .container
+    .row.work
+      - data.designs.each do |design|
+        %div{ class: "col-4 work-container" }
+          .work-box
+            .work-text
+              .work-inner
+                = inline_svg("#{design['icon']}", class: "work-svg")
+                %h6.work-title= design['title']
+                %p.work-subtitle= design['project']
+                %ul.work-list.list-unstyled
+                  %li.work-content
+                    %i Responsibilities:
+                  - unless design['details'].blank?
+                    - design['details'].each do |details|
+                      %li.work-content= details
+                - if design['active'] == "true"
+
+                  = link_to "Explore", "/work/#{(design.title).parameterize}", class: "work-button btn btn-theme-red btn-lg"
+                - else
+                  %button.work-button.btn.btn-theme-red.btn-lg.btn-disabled{ href: "#"} Coming Soon
+    %hr
+
+    .row
+      .col-7
+        %h2.section-sub-heading
+          UX Work
+
     .row.work
       - data.works.each do |work|
         %div{ class: "col-4 work-container" }
@@ -24,7 +49,14 @@
                     - work['details'].each do |details|
                       %li.work-content= details
                 - if work['active'] == "true"
-                  
+
                   = link_to "Explore", "/work/#{(work.title).parameterize}", class: "work-button btn btn-theme-red btn-lg"
                 - else
                   %button.work-button.btn.btn-theme-red.btn-lg.btn-disabled{ href: "#"} Coming Soon
+
+    %hr
+
+    .row
+      .col-7
+        %h2.section-sub-heading
+          = link_to "Case Studies", "/case-studies"

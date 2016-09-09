@@ -37,25 +37,26 @@ $susy: (
 /// @see {mixin} respond-to
 /// @type Map
 $breakpoints: (
-
-  'x-small':( max-width:  767px ),
-  'small':  ( min-width:  768px ),
-  'medium': ( min-width:  992px ),
-  'large':  ( min-width: 1200px ),
-
+  'x-small':( max-width:  420px ), //iphone6 plus portrait size
+  'small':  ( max-width:  768px ),
+  'medium': ( max-width:  992px ),
+  'medium-max': ( max-width:  1199px ),
+  'large':  ( min-width: 1200px )
 ) !global;
 
 //Fonts
 $font-size: 1.6;
 
 //Fonts
-$sansFontFamily:    "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$helvetica:         "Helvetica Neue", Helvetica, Arial, sans-serif;
+$sansFontFamily:    'Signika', $helvetica;
 $serifFontFamily:   "Josefin Slab", "Times New Roman", Times, serif;
-$roboto:            "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$roboto:            "Roboto", $helvetica;
+$palanquin:         'Palanquin', $helvetica;
 
-$upper-class:   $serifFontFamily;
+$upper-class:   $roboto;
 $dress-class:   $sansFontFamily;
-$work-class:    $roboto;
+$work-class:    $palanquin;
 
 .upper-class {  font-family:  $upper-class; line-height:110%; } // weird line-height
 .dress-class {  font-family:  $dress-class; }

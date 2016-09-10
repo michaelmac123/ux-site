@@ -3,16 +3,17 @@
   $primary-nav:     $bone;
   $primary-text:    $charcoal;
   @include prefix(border-radius, 0, moz webkit);
-  background-color: $white;
+  background-color: rgba($white, .9);
   border:{
-    top:            25px solid $theme-red;
-    right:          0;
-    bottom:         0;
-    left:           0; }
-  margin-bottom:    0;
-  min-height:       120px;
-  padding:          10px 0 0 0;
-  z-index:          10;
+    top: 25px solid $theme-red;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  margin-bottom: 0;
+  min-height: 130px;
+  padding: 10px 0 0 0;
+  z-index: 10;
   .navbar-header {
     @include float;
     width: 50%; }

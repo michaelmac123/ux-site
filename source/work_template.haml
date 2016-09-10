@@ -9,7 +9,7 @@
             .intro-message
               .intro-content
                 .row
-                  .col-4
+                  .col-5
                     %h2.dress-class.margin-topgap5.text-left= wrk['title']
                     .process-key-points
                       .col-lg-4.col-xs6
@@ -28,6 +28,19 @@
                         %ul.clear-left
                           - wrk['requirements'].each do |req|
                             %li= req
-                  .col-7.col-push-1
-                    = image_tag "work/#{wrk['title'].parameterize}/hero-#{wrk['title'].parameterize}.png", class: "img-responsive"
+                      - if wrk['link']
+                        .col-lg-4.col-xs6
+                          %h3.text-left.margin-bottomgap5 #{ wrk['link'].length > 1 ? "Project Links" : "Project Link" }
+                          %hr.section-heading-spacer
+                          %ul.clear-left.list-unstyled
+                            - wrk['link'].each do |lk|
+                              %li
+                                - lk['link'].each do |l|
+                                  - if l['type']
+                                    .col-2 #{l['type']}
+                                  - if l['link']
+                                    %a.col-10{ href: "#{l['link']}", target: "_blank"}= l['link']
+
+                  .col-7
+                    = image_tag "work/#{wrk['title'].parameterize}/hero-#{wrk['title'].parameterize}.png", class: "img-responsive no-shadow"
     = partial "work/#{wrk['title'].parameterize}"

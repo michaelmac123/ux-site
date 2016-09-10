@@ -34,14 +34,13 @@
 
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'
     = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'
+    = javascript_include_tag 'vendor/lightbox.min.js'
 
     -# Stylesheets
+    = stylesheet_link_tag 'vendor/lightbox.min.css'
     = stylesheet_link_tag 'application'
 
   %body{class: current_page.data.body_class || 'page'}
-    / %span#top-link-block.hidden
-    /   %a{ href: "#top", onclick: "$('html,body').animate({scrollTop:0},'slow');return false;" }
-    /     %i.fa.fa-angle-up.fa-2x
     = yield
 
     = partial "layouts/footer"
@@ -57,10 +56,7 @@
     /[if lt IE 9]
       %script{:src => "https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"}
       %script{:src => "https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"}
-    :javascript
-      if ( ($(window).height() + 300) < $(document).height() ) {
 
-      }
     - if build?
       -# Google Analytics
       :javascript

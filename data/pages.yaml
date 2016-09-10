@@ -7,6 +7,6 @@
 - pages:
   id: 4
   name: find me
-- pages:
-  id: 3
-  name: cv
+# - pages:
+#   id: 3
+#   name: cv

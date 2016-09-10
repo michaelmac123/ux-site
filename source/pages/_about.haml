@@ -18,16 +18,13 @@ body_class: index
           Skills
         %hr.section-heading-spacer
           .colper-9.margin-topgap20.margin-bottomgap5{ style: "background-color:lightblue;"}
-            %p.margin-gap0.padding-gap10 User Experience
+            %p.margin-gap0.padding-gap10 User Experience Design
 
           .colper-8.margin-bottomgap5.clear-both{ style: "background-color:lightpink;"}
             %p.margin-gap0.padding-gap10 Information Architecture
 
           .colper-10.margin-bottomgap5{ style: "background-color:gainsboro;"}
             %p.margin-gap0.padding-gap10 Visual Design
-
-          .colper-7.clear-both.margin-bottomgap5{ style: "background-color:plum;"}
-            %p.margin-gap0.padding-gap10 Research
 
           .colper-9.margin-bottomgap5{ style: "background-color:lightgreen;"}
             %p.margin-gap0.padding-gap10 Wireframing
@@ -45,9 +42,10 @@ body_class: index
         %h2.section-heading.margin-bottomgap0.med-blue
           Tying it all together
           %small (select below to learn more)
+        %hr.section-heading-spacer
         %p.about-content
           I’ve worn many hats in my career — I’ve had a lot of roles and understand their different needs, but what do they all have in common?
-          My consumer obsession, desire to create something fantastic for them and my ablility to bring that creation to life on the web.
+          My consumer obsession, desire to create something fantastic for them and my ablility to bring that creation to life.
 
 
         .about-list-circles
@@ -77,7 +75,6 @@ body_class: index
             = inline_svg('ux-clipboard-svg', class: "about-svg")
           %span.about-list-title UX Designer
 
-.content-section-a
   .container
     .row.about-box-panel#panel_1
       .col-12
@@ -146,10 +143,28 @@ body_class: index
         %ul.list-inline.about-list-tubes
           %li Rapid Prototyping
           %li UX Research
-          %li Balsamiq
+          %li InVision App
           %li User Scenarios
           %li Proto Personas
           %li Card Sorting
+
+.content-section-b
+  .container
+    .row.job.padding-bottomgap20
+      .col-12
+        %h2.section-heading.margin-bottomgap0.med-blue Fine print
+        %hr.section-heading-spacer
+        %p.job-title.clear-left Essential Skills:
+        %p.job-description Mobile website & application design, Visual design, Interface design, User experience design, Front-end web development
+
+        %p.job-title Software Expertise:
+        %p.job-description Photoshop, Illustrator, InDesign, Sketch, Keynote, InVision App, Balsamiq, TextMate, Sublime Text
+
+        %p.job-title Web Technologies:
+        %p.job-description HTML, HAML, CSS3, SCSS, LESS, OOCSS, PHP, Ruby on Rails, JavaScript, jQuery, SVN, Git
+
+        %p.job-title Methodologies:
+        %p.job-description Interviews, Usability Testing, Surveys, Web/Search Analytics, Card Sorting, Personas, User Scenarios, Pen & Paper
 
 :javascript
   $(document).ready(function(){

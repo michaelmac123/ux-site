@@ -160,7 +160,7 @@ $background_page_color: $white;
         background-color: rgba($dark-blue, .75); }
       .work-content{
         @include prefix(transition, all 600ms ease, moz webkit o ms);
-        margin-top: calc(50% - 3em);
+        margin-top: calc(50% - 4em);
         opacity: 1; }
       .work-button {
         @include prefix(transition, all 700ms ease, moz webkit o ms);
@@ -394,6 +394,12 @@ $background_page_color: $white;
 .footer {
   &-svg svg{
     fill: $white;
+    height: 20px;
+    vertical-align: middle;
+    width: 25px;
+  }
+  &-svg.linkedin-ico svg {
+    height: 22px;
   }
   &-links ul {
     margin: 0;
@@ -409,7 +415,7 @@ $background_page_color: $white;
         left: 1em; } }
 
     li:after {
-      border-right: 1px solid rgba(255, 255, 255, 0.75);
+      border-right: 1px solid $charcoal;
       content: "";
       padding-left: 1em;
       position: relative;

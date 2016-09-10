@@ -14,10 +14,14 @@
     - "Give clear indication what steps have been completed"
     - "Automate specific steps."
   role:
-    - "Experience Strategy"
+    - "Experience strategy"
+    - "Rapid prototyping to test assumptions"
     - "Construct basic UI interactions and flow."
     - "Create working prototype to demonstrate flow."
-    - "Design & Develop UI overall look and feel."
+  link:
+    - link:
+      - type: "Prototype: "
+      - link: "http://bit.ly/affiliates-prototype"
 
 - work:
   id: 1
@@ -27,7 +31,7 @@
   title: "eLocal Call Center"
   project: "Call Center Interface"
   details:
-    - "UX Design"
+    - "User Experience Design"
     - "Rapid Prototyping"
     - "UI Development"
 
@@ -39,35 +43,47 @@
     - "Allow for user to interact with calls via the UI."
     - "Guide user through necessary steps to connect callers to advertisers."
   role:
-    - "Experience Strategy"
-    - "Construct basic UI interactions and flow."
-    - "Create working prototype to demonstrate flow."
-    - "Design & Develop UI overall look and feel."
-    - "Deliver CSS/SCSS architecture."
+    - "Experience strategy"
+    - "Prototype with refined visual design and interactions."
+    - "Deliver design that is coherent, cohesive, and satisfies user needs and goals."
+  link:
+    - link:
+      - type: "Prototype: "
+      - link: "http://cc-prototype.herokuapp.com"
+    - link:
+      - type: "GitHub: "
+      - link: "https://github.com/michaelmac123/CC_prototype"
 
 - work:
   id: 3
   active: "true"
   icon: "ux-pencil-svg"
-  name: "eLocalPlumbers.com"
-  title: "eLocal Plumbers"
-  project: "Mobile Design"
+  name: "Loving with Food"
+  title: "Loving with Food"
+  project: "Visual Design"
   details:
+    - "Visual Design"
+    - "User Experience Design"
     - "UI Development"
     - "Responsive Design"
-  overview: "Develop a stand-alone call center interface that will assists the call center personel to correctly and efficiently route IVR and direct calls to paying advertisers."
+  overview: "Dream Dinners wanted to create their own home delivery system that would cater to people in need. They wanted a visual design that incorporated a pre-produced short video that reflected the tone for the video."
   requirements:
-    - "Limited page reloads."
-    - "Give clear indication of state-changes."
-    - "Alert user of incoming calls."
-    - "Allow for user to interact with calls via the UI."
-    - "Guide user through necessary steps to connect callers to advertisers."
+    - "Incorporation of video."
+    - "Give clear indication of product intent."
+    - "Strong inidication of product offering."
+
   role:
     - "Experience Strategy"
     - "Construct basic UI interactions and flow."
     - "Create working prototype to demonstrate flow."
-    - "Design & Develop UI overall look and feel."
-    - "Deliver CSS/SCSS architecture."
+    - "Visual Design"
+  link:
+    - link:
+      - type: "Website: "
+      - link: "http://www.loving-with-food.com"
+    - link:
+      - type: "Prototype: "
+      - link: "https://invis.io/DK7JDUZ9W"
 
 - work:
   id: 4
@@ -112,3 +128,101 @@
     - "Create balanced food images for both web & print."
     - "Provide layout options for mulitple media channels."
     - "Accurately depict serving size and meal ratios."
+
+- work:
+  id: 6
+  active: "true"
+  icon: "ux-pencil-svg"
+  name: "Save the World"
+  title: "Save the World eLocal"
+  project: "Creative Direction"
+  details:
+    - "Creative Direction"
+    - "Art Direction"
+    - "Visual Design"
+  overview: "We wanted to find a way to give back to the communities that make a difference in the world. Our goal was to have a brand driven website with an interensting twist on the Mayan calendar."
+  role:
+    - "Creative Direction"
+    - "Food Photography"
+    - "Food Styling"
+    - "Layout Design"
+  requirements:
+    - "Create balanced food images for both web & print."
+    - "Provide layout options for mulitple media channels."
+    - "Accurately depict serving size and meal ratios."
+  link:
+    - link:
+      - type: "Website:"
+      - link: "http://www.elocal.com/save-the-world"
+
+- work:
+  id: 7
+  active: "true"
+  icon: "ux-pencil-svg"
+  name: "Becca's Restaurant"
+  title: "Beccas Restaurant"
+  project: "Branding & Design"
+  details:
+    - "Creative Direction"
+    - "Art Direction"
+    - "Visual Design"
+    - "Photography"
+  overview: "We wanted to find a way to give back to the communities that make a difference in the world. Our goal was to have a brand driven website with an interensting twist on the Mayan calendar."
+  role:
+    - "Creative Direction"
+    - "Art Direction"
+    - "Visual Design"
+    - "Photography"
+  requirements:
+    - "Develop brand presence for a new restaurant"
+    - "Create graphical collateral for digital and print media."
+    - "Generate content for media submission"
+
+- work:
+  id: 8
+  active: "true"
+  icon: "ux-pencil-svg"
+  name: "Prell"
+  title: "prell"
+  project: "Visual Design"
+  details:
+    - "Creative Direction"
+    - "e-Commerce"
+    - "Visual Design"
+  overview: "Ultimark Products was venturing into the realm of orphan brands and wanted to reimagine the Prell commercials from the '80s. My strategy was to merge vintage colors and graphics with modern technologies."
+  role:
+    - "Creative Direction"
+    - "e-Commerce"
+    - "Visual Design"
+  requirements:
+    - "Refresh product look but keep the vintage feel."
+    - "Create a landing page for pre-launch information."
+    - "Integrated nostalgic commerical into web page."
+
+- work:
+  id: 9
+  active: "true"
+  icon: "ux-pencil-svg"
+  name: "Transform Digital"
+  title: "Transform Digital"
+  project: "Rapid Prototype"
+  details:
+    - "Visual Design"
+    - "Rapid Prototyping"
+    - "User Experience Design"
+  overview: "For a client proposal, I needed to quickly create a working prototype that would showcase the team's design goals and marketing vision for a new product line."
+  role:
+    - "Visual Design"
+    - "Rapid Prototyping"
+    - "User Experience Design"
+  requirements:
+    - "Create a clean business landing page."
+    - "Show partner integration and smooth transitions."
+    - "Provide clear navigation for solid usablity."
+  link:
+    - link:
+      - type: "Prototype: "
+      - link: "http://kod-alaris.herokuapp.com/"
+    - link:
+      - type: "GitHub: "
+      - link: "https://github.com/michaelmac123/kodak-alaris"

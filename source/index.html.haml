@@ -6,18 +6,18 @@ body_class: index
 / = partial "layouts/header"
 / Page Content
 .content-section-a.clearfix
-  %div{ class: "column--1-3 work-container" }
+  .column--1-3.work-container
     %a{ href: '/work/elocal-affiliates' }
       .work-box
-        = image_tag "work/elocal-affiliates/hero-elocal-affiliates.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        = image_tag "work/elocal-affiliates/thumb-elocal-affiliates.png", class: "img-responsive", style: "width: 100%;position:absolute;"
         .work-text
           .work-inner
             .work-content
               %h6.work-title><
-                %span.block UX & Visual Design
+                %span.block User Experience Design
                 %span.block.small eLocal Affilates
               %p.work-subtitle ~ view ~
-  %div{ class: "column--2-3 work-container" }
+  .column--2-3.work-container
     %a{ href: '/work/dream-dinners' }
       .work-box
         = image_tag "work/dream-dinners/thumb-dream-dinners.png", class: "img-responsive", style: "width: 100%;position:absolute;"
@@ -28,8 +28,20 @@ body_class: index
                 %span.block Food Photography & Design
                 %span.block.small Dream Dinners
               %p.work-subtitle ~ view ~
-  %div{ class: "column--3-3 work-container" }
-    %a{ href: '/work/elocal-affiliates' }
+  .column--3-3.work-container
+    %a{ href: '/work/save-the-world-elocal' }
+      .work-box
+        = image_tag "work/save-the-world-elocal/thumb-save-the-world-elocal.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title><
+                %span.block Creative Direction
+                %span.block.small Save the World - eLocal
+              %p.work-subtitle ~ view ~
+
+  .column--1-3.work-container
+    %a{ href: '/work/loving-with-food' }
       .work-box
         = image_tag "work/loving-with-food/thumb-loving-with-food.png", class: "img-responsive", style: "width: 100%;position:absolute;"
         .work-text
@@ -37,30 +49,43 @@ body_class: index
             .work-content
               %h6.work-title><
                 %span.block Visual Design
-                %span.block.small Loving With Food
+                %span.block.small Loving With Food / ShareCrate
               %p.work-subtitle ~ view ~
-
-  %div{ class: "column--1-3 work-container" }
-    %a{ href: '/work/elocal-affiliates' }
-      .work-box
-        = image_tag "work/placeholder-img.jpg", class: "img-responsive", style: "width: 100%;position:absolute;"
-        .work-text
-          .work-inner
-            .work-content
-              %h6.work-title design title
-              %p.work-subtitle ~ view ~
-  %div{ class: "column--2-3 work-container" }
+  .column--2-3.work-container
     %a{ href: '/work/elocal-call-center' }
       .work-box
-        = image_tag "work/elocal-call-center/hero-elocal-call-center.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        = image_tag "work/elocal-call-center/thumb-elocal-call-center.png", class: "img-responsive", style: "width: 100%;position:absolute;"
         .work-text
           .work-inner
             .work-content
               %h6.work-title><
-                %span.block UX & Visual Design
+                %span.block User Experience Design
                 %span.block.small eLocal Call Center
               %p.work-subtitle ~ view ~
-  %div{ class: "column--3-3 work-container" }
+  .column--3-3.work-container
+    %a{ href: '/work/beccas-restaurant' }
+      .work-box
+        = image_tag "work/beccas-restaurant/thumb-beccas-restaurant.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title><
+                %span.block Branding & Design
+                %span.block.small Becca's Restaurant
+              %p.work-subtitle ~ view ~
+
+  .column--1-3.work-container
+    %a{ href: '/work/prell' }
+      .work-box
+        = image_tag "work/prell/thumb-prell.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title><
+                %span.block Visual Design
+                %span.block.small Prell / Ultimark Products
+              %p.work-subtitle ~ view ~
+  .column--2-3.work-container
     %a{ href: '/work/lifestyle-dream-dinners' }
       .work-box
         = image_tag "work/lifestyle-dream-dinners/thumb-lifestyle-dream-dinners.png", class: "img-responsive", style: "width: 100%;position:absolute;"
@@ -70,4 +95,15 @@ body_class: index
               %h6.work-title
                 %span.block Lifestyle Photography
                 %span.block.small Dream Dinners
+              %p.work-subtitle ~ view ~
+  .column--3-3.work-container
+    %a{ href: '/work/transform-digital' }
+      .work-box
+        = image_tag "work/transform-digital/thumb-transform-digital.png", class: "img-responsive", style: "width: 100%;position:absolute;"
+        .work-text
+          .work-inner
+            .work-content
+              %h6.work-title
+                %span.block Rapid Prototype
+                %span.block.small Kodak / Transform Digital
               %p.work-subtitle ~ view ~

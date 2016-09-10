@@ -51,6 +51,13 @@ p {
     weight: normal; }
   text-decoration:none; }
 
+a {
+  color: $theme-red;
+  &:hover {
+    color: $charcoal;
+  }
+}
+
 hr {
   border:{
     top: .1em solid lighten($med-blue, 15);
@@ -103,6 +110,7 @@ img {
 
 // List Styles
 .list-unstyled {
+  padding-left: 20px;
   li {
     list-style-type: none; } }
 
@@ -125,3 +133,6 @@ img {
 
 .headroom--unpinned {
   @include prefix(transition, translateY(-100%), moz webkit o ms ); }
+.img-responsive.no-shadow {
+  @include prefix(box-shadow, none, o ms moz webkit);
+}

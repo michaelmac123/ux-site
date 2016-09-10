@@ -219,6 +219,20 @@
     }
   }
 }
+.column--with-margin {
+  @include make-cols-sizer(1);
+  @include make-cols-sizer(2);
+  @include make-cols-sizer(3);
+  @include make-cols-sizer(4);
+}
+.column--without-margin {
+  @include make-cols-sizer(1, 0);
+  @include make-cols-sizer(2, 0);
+  @include make-cols-sizer(3, 0);
+  @include make-cols-sizer(4, 0);
+}
+
+@include make-cols-sizer(1, 0);
 @include make-cols-sizer(2, 0);
 @include make-cols-sizer(3, 0);
 @include make-cols-sizer(4, 0);

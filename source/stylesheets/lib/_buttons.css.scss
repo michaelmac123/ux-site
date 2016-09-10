@@ -58,4 +58,12 @@ $colors: "charcoal" $charcoal, "white" $white, "light-blue" $light-blue, "med-bl
   &.btn-lg {
     padding:  .75em 2em;
   }
+  &.btn-round {
+    border: none;
+    @include prefix(border-radius, 50%, o ms moz webkit);
+    padding: 10px;
+    &:hover {
+      border: none;
+    }
+  }
 }

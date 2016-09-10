@@ -1,62 +1,39 @@
 .content-section-b
   .container
     .row
-      .col-12
+      .col-4
         %h2.section-heading.margin-bottomgap0.med-blue
           Phase 1
         %hr.section-heading-spacer
         %p.clear-left
-          Experience Strategy
+          Basic UI Interactions & Flow
         %p.clear-left.section-body-text
-          Create paper prototype to work with project manager to “rough out” the basic flow and actions the users will follow.  
-        
+          Create paper prototype to work with project manager to “rough out” the basic flow and actions the users will follow. This tactic is especially helpful when the primary stakeholder gives a very rough outline of the concept. A few quick sketches allowed me to discover a few majory ommissions that would not have been discovered until the development cycle started.
+      .col-7= image_tag "work/elocal-call-center/elocal-call-center-2.png", class: "img-responsive"
 
-      .col-12
-        .col-4= image_tag "work/elocal-call-center/elocal-call-center-2.png", class: "img-responsive"
 .content-section-a
   .container
-    .row
-      .col-12= image_tag "work/elocal-call-center/elocal-call-center-2.png", class: "img-responsive"
-      .col-12
+    .row.margin-gap20
+      .col-7= image_tag "work/elocal-call-center/elocal-call-center-1.png", class: "img-responsive"
+      .col-4
         %h2.section-heading.margin-bottomgap0.med-blue
           Phase 2
         %hr.section-heading-spacer
         %p.clear-left
-          Basic UI Interactions & Flow
+          Create Working Prototype
         %p.clear-left.section-body-text
-          %br
-          Then a rapid prototype was created with Angular.JS and Middleman to further define page interactions and create HTML/CSS skeleton for the dev team. 
-          %br
-          Operation team was brought in and asked to use the system. The team's interactions were recorded and 
-
+          With a clear understanding of the primary user scenario, I went straight to creating a rapid prototype with Angular.JS and Middleman to further define page interactions and create HTML/CSS skeleton for the dev team. Skipping a static mockup was possible because we had clearly scoped all the interactions in the prior phase. This allowed me to show how the page would be flow in addition, it gave us the ability to create design patterns for reuse throughout the project.
+        %p.clear-left.section-body-text
+          We defined a select group from our call center team and asked them to use the system. The team's interactions were recorded and reviewed in a seperate session with the stakeholder and lead developer. This step should gaps in the systems call handling proceedure, where the consumer's location wasn't being captured at the time of the call.
 .content-section-b
   .container
     .row
-      .col-12
+      .col-4
         %h2.section-heading.margin-bottomgap0.med-blue
           Phase 3
         %hr.section-heading-spacer
         %p.clear-left
-          Create Working Prototype
+          Deliver CSS/SCSS architecture / Hand-off
         %p.clear-left.section-body-text
-          Then a rapid prototype was created with Angular.JS and Middleman to further define page interactions and create HTML/CSS skeleton for the dev team. 
-          %br
-          Operation team was brought in and asked to use the system. The team's interactions were recorded and 
-        .col-12
-
-.content-section-a
-  .container
-    .row
-      .col-12= image_tag "work/elocal-call-center/elocal-call-center-2.png", class: "img-responsive"
-      .col-12
-        %h2.section-heading.margin-bottomgap0.med-blue
-          Phase 4
-        %hr.section-heading-spacer
-        %p.clear-left
-          Deliver CSS/SCSS architecture
-        %p.clear-left.section-body-text
-          %br
-          Then a rapid prototype was created with Angular.JS and Middleman to further define page interactions and create HTML/CSS skeleton for the dev team. 
-          %br
-          Operation team was brought in and asked to use the system. The team's interactions were recorded and 
-
+          Having the lead developer involved during the final user testing review, gave him a clear understanding of what we were trying to accomplish with this product. We had established an open dialog between him and the call center lead, so he could quickly solve basic interaction roadblocks and keep us within the project's timeline. Having the design patterns scoped during the previous phase streamlined the development cycle and lead to less brittle code.
+      .col-7= image_tag "work/elocal-call-center/elocal-call-center-3.png", class: "img-responsive"

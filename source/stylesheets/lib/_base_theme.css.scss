@@ -145,6 +145,12 @@ $background_page_color: $white;
     margin: 0;
     padding: 0;
     position: relative;
+    @include respond_to('small') {
+      margin-bottom: 5px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
   &-box {
     background: transparent;
@@ -157,18 +163,23 @@ $background_page_color: $white;
     &:hover {
       @include prefix(transition, all 700ms ease, moz webkit o ms);
       .work-text {
-        background-color: rgba($dark-blue, .75); }
+        background-color: rgba($dark-blue, .75);
+      }
       .work-content{
         @include prefix(transition, all 600ms ease, moz webkit o ms);
         margin-top: calc(50% - 4em);
-        opacity: 1; }
+        opacity: 1;
+      }
       .work-button {
         @include prefix(transition, all 700ms ease, moz webkit o ms);
-        opacity: 1; }
+        opacity: 1;
+      }
       .work-svg svg{
         @include prefix(transition, all 250ms ease, moz webkit o ms);
-        opacity: 0; }
-    } }
+        opacity: 0;
+      }
+    }
+  }
   &-text {
     @include prefix(transition, all 600ms ease, moz webkit o ms);
     color: $white;
@@ -178,7 +189,11 @@ $background_page_color: $white;
     position: absolute;
     right: 0;
     text-shadow: 0 0 1px $dark-blue;
-    top:                  0; }
+    top: 0;
+    @include respond_to('small') {
+      background-color: rgba($dark-blue, .65);
+    }
+  }
   &-button {
     font-size:          1.25em;
     opacity:            0;
@@ -219,7 +234,12 @@ $background_page_color: $white;
     i {
       color:            $theme-red;
       margin-left:     -5px;
-    } }
+    }
+    @include respond_to('small') {
+      margin-top: calc(50% - 4em);
+      opacity: 1;
+    }
+  }
   &-svg svg {
     fill:              $med-blue;
     height:            25%;

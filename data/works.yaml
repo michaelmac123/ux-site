@@ -10,9 +10,9 @@
     - "UI Layout"
   overview: "Create a simpler way to onboard affiliates and allow the operations team to track all steps in the process."
   requirements:
-    - "Create Dashboard for onboarding process"
-    - "Give clear indication what steps have been completed"
-    - "Automate specific steps."
+    - "Streamline onboarding process with concise dashboard."
+    - "Give clear indication which steps have been completed."
+    - "Create automations for redundant steps."
   role:
     - "Experience strategy"
     - "Rapid prototyping to test assumptions"
@@ -121,13 +121,12 @@
   overview: "Create interesting images for the Dream Dinners brand that showcases the diverse range of meals available to consumers. "
   role:
     - "Creative Direction"
-    - "Food Photography"
-    - "Food Styling"
-    - "Layout Design"
+    - "Art Direction"
+    - "Lifestyle Photography"
   requirements:
-    - "Create balanced food images for both web & print."
+    - "Create lifestyle images for both web & print."
+    - "Define look and feel for furture lifestyle shoots. "
     - "Provide layout options for mulitple media channels."
-    - "Accurately depict serving size and meal ratios."
 
 - work:
   id: 6
@@ -143,13 +142,12 @@
   overview: "We wanted to find a way to give back to the communities that make a difference in the world. Our goal was to have a brand driven website with an interensting twist on the Mayan calendar."
   role:
     - "Creative Direction"
-    - "Food Photography"
-    - "Food Styling"
-    - "Layout Design"
+    - "Art Direction"
+    - "Visual Design"
   requirements:
-    - "Create balanced food images for both web & print."
-    - "Provide layout options for mulitple media channels."
-    - "Accurately depict serving size and meal ratios."
+    - "Highlight brand and major verticals."
+    - "Integrate web and video creatives."
+    - "Create buzz through social media around charities."
   link:
     - link:
       - type: "Website:"

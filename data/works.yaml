@@ -35,13 +35,13 @@
     - "Rapid Prototyping"
     - "UI Development"
 
-  overview: "Develop a stand-alone call center interface that will assists the call center personel to correctly and efficiently route IVR and direct calls to paying advertisers."
+  overview: "Develop a stand-alone call center interface that will assist the call center personel to correctly and efficiently route IVR and direct calls to paying advertisers."
   requirements:
-    - "Limited page reloads."
-    - "Give clear indication of state-changes."
+    - "Limit page reloads."
+    - "Give clear indication of state changes."
     - "Alert user of incoming calls."
     - "Allow for user to interact with calls via the UI."
-    - "Guide user through necessary steps to connect callers to advertisers."
+    - "Guide users through necessary steps to connect callers to advertisers."
   role:
     - "Experience strategy"
     - "Prototype with refined visual design and interactions."
@@ -66,7 +66,7 @@
     - "User Experience Design"
     - "UI Development"
     - "Responsive Design"
-  overview: "Dream Dinners wanted to create their own home delivery system that would cater to people in need. They wanted a visual design that incorporated a pre-produced short video that reflected the tone for the video."
+  overview: "Dream Dinners wanted to create their own direct to consumer, meal kit delivery system that would celebrate life's moments. They wanted a design that visually complemented the sentiment and feeling from the hero video."
   requirements:
     - "Incorporation of video."
     - "Give clear indication of product intent."
@@ -103,7 +103,7 @@
     - "Food Styling"
     - "Layout Design"
   requirements:
-    - "Create balanced food images for both web & print."
+    - "Create balanced food images for both digital & print."
     - "Provide layout options for mulitple media channels."
     - "Accurately depict serving size and meal ratios."
 
@@ -118,13 +118,13 @@
     - "Creative Direction"
     - "Art Direction"
     - "Lifestyle Photography"
-  overview: "Create interesting images for the Dream Dinners brand that showcases the diverse range of meals available to consumers. "
+  overview: 'Create interesting images for the Dream Dinners brand that showcases the diverse range of meals available to consumers while celebrating their central theme, "family".'
   role:
     - "Creative Direction"
     - "Art Direction"
     - "Lifestyle Photography"
   requirements:
-    - "Create lifestyle images for both web & print."
+    - "Create lifestyle images for both digital and print."
     - "Define look and feel for furture lifestyle shoots. "
     - "Provide layout options for mulitple media channels."
 
@@ -165,7 +165,7 @@
     - "Art Direction"
     - "Visual Design"
     - "Photography"
-  overview: "We wanted to find a way to give back to the communities that make a difference in the world. Our goal was to have a brand driven website with an interensting twist on the Mayan calendar."
+  overview: "Provide creative direction and budget minded photography for the launch of a new restaurant."
   role:
     - "Creative Direction"
     - "Art Direction"
@@ -181,13 +181,13 @@
   active: "true"
   icon: "ux-pencil-svg"
   name: "Prell"
-  title: "prell"
+  title: "Prell"
   project: "Visual Design"
   details:
     - "Creative Direction"
     - "e-Commerce"
     - "Visual Design"
-  overview: "Ultimark Products was venturing into the realm of orphan brands and wanted to reimagine the Prell commercials from the '80s. My strategy was to merge vintage colors and graphics with modern technologies."
+  overview: "Ultimark Products was venturing into the realm of orphaned brands and wanted to re-imagine the Prell commercials from the '80s. My strategy was to merge vintage colors and graphics with modern technologies."
   role:
     - "Creative Direction"
     - "e-Commerce"

@@ -111,7 +111,7 @@
         size: .7em;
         style: italic; }
       position: relative;
-      top: .16em; }
+      top: .3rem; }
     &:hover {
       @include prefix(transition,all 250ms, moz webkit ms o);
       color: $theme-red;

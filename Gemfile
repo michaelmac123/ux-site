@@ -34,7 +34,7 @@ gem 'middleman-minify-html'
 gem 'uglifier'
 
 # Faster JS minification
-gem 'therubyracer'
+# gem 'therubyracer'
 gem 'oj'
 
 # Faster JS
